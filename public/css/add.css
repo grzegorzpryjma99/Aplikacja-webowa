@@ -1,0 +1,132 @@
+.add{
+    display: grid;
+    color: teal;
+    /*
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+     grid-template-areas:
+    "name macro"
+    "photo products"
+    "description steps";
+    */
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 10px;
+
+}
+
+.add > * {
+    grid-column: col-start / span 12;
+  }
+
+.name{
+    grid-column: col-start 1/ span 4;
+    grid-row: 1;
+}
+
+.name>div{
+    background-color: white;
+    width: 30vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+    
+}
+
+.photo{
+    grid-column: col-start 1/ span 4;
+    grid-row: 2/5;
+}
+
+.photo>div{
+    background-color: white;
+    border-radius: 24px;
+    margin: 20px;
+    width: 30vw;
+    height: 30vh;
+    border: 2px solid #BCE0FD;
+}
+
+.description{
+    grid-column: col-start 1/ span 4;
+    grid-row: 5;
+}
+
+.description>div{
+    background-color: white;
+    width: 30vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.protein{
+    grid-column: col-start 8 / span 10 ;
+    grid-row: 1/2;
+}
+
+.protein>div{
+    background-color: white;
+    width: 15vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.fat{
+    grid-column: col-start 8 / span 10 ;
+    grid-row: 2;
+}
+
+.fat>div{
+    background-color: white;
+    width: 15vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.carbs{
+    grid-column: col-start 8 / span 10 ;
+    grid-row: 3;
+}
+
+.carbs>div{
+    background-color: white;
+    width: 15vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+
+.products{
+    grid-column: col-start 8 / span 10 ;
+    grid-row: 4;
+}
+
+.products>div{
+    background-color: white;
+    width: 30vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.steps{
+    grid-column: col-start 8 / span 11 ;
+    grid-row: 5;
+    
+}
+
+.steps>div>{
+    background-color: white;
+    width: 30vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.dodaj{
+    grid-column: col-start 11 / span 11 ;
+    grid-row: 6;
+}
