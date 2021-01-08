@@ -1,0 +1,129 @@
+
+
+/*
+#kcal{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+
+}
+
+#kcal::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+#selector{
+    height: 104px;
+    width: 48px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.SelectBtn{
+    height: 48px;
+    width: 48px;
+    background-image: -moz-linear-gradient(chartreuse,chartreuse);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+*/
+.find{
+    color: #43A3B4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+     grid-template-areas:
+    "kcal protein"
+    "carbs products"
+    "fat category";
+}
+
+.kcal{
+    grid-area: kcal;
+}
+
+.carbs{
+    grid-area: carbs;
+}
+
+.fat{
+    grid-area: fat;
+}
+
+.protein{
+    grid-area: protein;
+    
+}
+
+.products{
+    grid-area: products;
+    
+}
+
+.category{
+    grid-area: category;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "b1 b2 b3 b4 b5"
+    "c1 c2 c3 c4 c5 ";
+}
+.category1{
+    grid-area: c1;
+}
+.category2{
+    grid-area: c2;
+}
+.category3{
+    grid-area: c3;
+}
+.category4{
+    grid-area: c4;
+}
+.category5{
+    grid-area: c5;
+}
+.button1{
+    grid-area: b1;
+}
+.button2{
+    grid-area: b2;
+}
+.button3{
+    grid-area: b3;
+}
+.button4{
+    grid-area: b4;
+}
+.button5{
+    grid-area: b5;
+}
+.find>.category>button{
+    border-radius: 100%;
+}
+
+
+.find>button{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+    width: 50%;
+    border: none;
+    color: #43A3B4;
+    margin: 1em;
+    line-height: 2.5em;
+}
+
