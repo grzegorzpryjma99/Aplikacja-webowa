@@ -1,0 +1,151 @@
+section{
+    display: grid;
+    grid-template-columns: repeat(2,ifr);
+    grid-gap: 3em;
+    padding: 0em;
+    overflow: hidden;
+    
+}
+
+.profiluzytkownika{
+    width: 60%;
+    height: 100%;
+    color: teal;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+     grid-template-areas:
+    "side header2 circle"
+    "content content content"
+    "footer footer footer";  
+}
+
+.zdjecie{
+    grid-area: side;
+    border-radius:100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
+	height: 10vh;
+
+}
+
+.nazwauzytkownika{
+    grid-area: header2;
+    text-align: left;
+}
+
+.content{
+    grid-area: content;
+    width: 50%;
+    height: 50%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.przyciski{
+    grid-area: footer;
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.circle{
+    grid-area: circle;
+    width: 8vw;
+	height: 8vh;
+	background-color: teal;
+	border-radius: 100%;
+    
+}
+
+.przepisyuzytkownika{
+    display: grid;
+
+    grid-gap: 1em;
+    overflow: auto;
+    height: 100%;
+    width: 40%;
+    float: left;
+    position: relative;
+    
+}
+
+.przepisy{
+    display: grid;
+    margin: 1em;
+    grid-gap: 1em;
+    overflow: auto;
+    height: 100%;
+    width: auto;
+    float: left;
+    position: relative;
+}
+ 
+.przepisy img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+ 
+.social1{
+    position: absolute;
+    background: #FFFFFF8C 0% 0% no-repeat padding-box;
+    width: 98%;
+    padding: 1%;
+    text-align: center;
+    top:21%;
+    left: 50%;
+    font-size: 20px;
+    color: black;   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.social2{
+    position: absolute;
+    background: #FFFFFF8C 0% 0% no-repeat padding-box;
+    width: 98%;
+    padding: 1%;
+    text-align: center;
+    top:47%;
+    left: 50%;
+    font-size: 20px;
+    color: black;   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.social3{
+    position: absolute;
+    background: #FFFFFF8C 0% 0% no-repeat padding-box;
+    width: 98%;
+    padding: 1%;
+    text-align: center;
+    top:72%;
+    left: 50%;
+    font-size: 20px;
+    color: black;   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.social4{
+    position: absolute;
+    background: #FFFFFF8C 0% 0% no-repeat padding-box;
+    width: 98%;
+    padding: 1%;
+    text-align: center;
+    top:98%;
+    left: 50%;
+    font-size: 20px;
+    color: black;   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+

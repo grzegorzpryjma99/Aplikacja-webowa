@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
-    <link rel="stylesheet" type= "text/css" href="public/css/przepisy.css">
+    <link rel="stylesheet" type= "text/css" href="public/css/home.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
     <title>HOMEE</title>
 </head>
@@ -38,7 +38,13 @@
                     <img src="public/img/logov3.svg">
                 </div>
             </header>
+
+        
+                 
             <section class="home">
+                
+                
+               
                 <div id = "project 1">
                     <img src="public/img/uploads/dddddd.png">
                     <div>
@@ -46,14 +52,6 @@
                             <i class="fas fa-heart">600</i>
                         </div>   
                     </div>
-                </div>
-                <div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
                 </div><div id = "project 1">
                     <img src="public/img/uploads/dddddd.png">
                     <div>
@@ -103,15 +101,10 @@
                             <i class="fas fa-heart">600</i>
                         </div>   
                     </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div>
+
+               
             </section>
+            
         </main>
     </div>
 
