@@ -7,9 +7,15 @@ section{
     
 }
 
+.profile-container{
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
 .profiluzytkownika{
-    width: 60%;
-    height: 100%;
+    width: 44vw;
+    height: 55vh;
     color: teal;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -22,11 +28,11 @@ section{
 
 .zdjecie{
     grid-area: side;
-    border-radius:100%;
+    border-radius: 100%;
     margin-left: auto;
     margin-right: auto;
-    width: 10vw;
-	height: 10vh;
+    width: 8vw;
+    height: 8vh;
 
 }
 
@@ -37,8 +43,8 @@ section{
 
 .content{
     grid-area: content;
-    width: 50%;
-    height: 50%;
+    width: 33vw;
+    height: 16vh;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
@@ -46,8 +52,8 @@ section{
 
 .przyciski{
     grid-area: footer;
-    width: 50%;
-    height: 50%;
+    width: 20vw;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
     
@@ -55,31 +61,33 @@ section{
 
 .circle{
     grid-area: circle;
-    width: 8vw;
-	height: 8vh;
-	background-color: teal;
-	border-radius: 100%;
+    margin: 16px;
+    width: 5vw;
+    height: 5vh;
+    background-color: teal;
+    border-radius: 100%;
     
 }
 
 .przepisyuzytkownika{
-    display: grid;
-
+    display: flex;
+    flex-direction: row;
     grid-gap: 1em;
     overflow: auto;
     height: 100%;
-    width: 40%;
+    width: 50%;
     float: left;
     position: relative;
     
 }
 
 .przepisy{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin: 1em;
     grid-gap: 1em;
-    overflow: auto;
-    height: 100%;
+    overflow: unset;
+    height: auto;
     width: auto;
     float: left;
     position: relative;
@@ -97,7 +105,7 @@ section{
     width: 98%;
     padding: 1%;
     text-align: center;
-    top:21%;
+    top:26%;
     left: 50%;
     font-size: 20px;
     color: black;   
@@ -111,7 +119,7 @@ section{
     width: 98%;
     padding: 1%;
     text-align: center;
-    top:47%;
+    top:57%;
     left: 50%;
     font-size: 20px;
     color: black;   
@@ -125,7 +133,7 @@ section{
     width: 98%;
     padding: 1%;
     text-align: center;
-    top:72%;
+    top:87%;
     left: 50%;
     font-size: 20px;
     color: black;   
@@ -139,7 +147,7 @@ section{
     width: 98%;
     padding: 1%;
     text-align: center;
-    top:98%;
+    top:118%;
     left: 50%;
     font-size: 20px;
     color: black;   
@@ -148,4 +156,45 @@ section{
 }
 
 
+@media only screen and (max-device-width: 420px){
 
+    .profile-container{
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        height: auto;
+    }
+
+    .przepisyuzytkownika{
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .przepisy{
+        overflow: hidden;
+    }
+
+    .profiluzytkownika{
+        width: 100vw;
+        height: 79vh;
+    }
+
+    .content {
+        grid-area: content;
+        width: 75vw;
+        height: 16vh;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .przyciski {
+        grid-area: footer;
+        width: 75vw;
+        height: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
