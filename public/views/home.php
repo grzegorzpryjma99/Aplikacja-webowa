@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
-<<<<<<< Updated upstream
-    <link rel="stylesheet" type= "text/css" href="public/css/przepisy.css">
-=======
     <link rel="stylesheet" type= "text/css" href="public/css/home.css">
->>>>>>> Stashed changes
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
     <title>HOMEE</title>
 </head>
 
 <body>
     <div class="base-container">
-<<<<<<< Updated upstream
-        <nav>  
-=======
         <nav class="site-nav">  
->>>>>>> Stashed changes
             <img src="public/img/logov2.svg">
             <u1>
                 <li>
@@ -37,14 +29,11 @@
                 </li>
             </u1>
         </nav>
-        <main>
+        <main class="main">
             <header>
-<<<<<<< Updated upstream
-=======
                 <div class="hamburger1">
                     <button class="hamburger"></button>
                 </div>
->>>>>>> Stashed changes
                 <div class="tekst">
                     Znajdź coś dla siebie...
                 </div>
@@ -52,16 +41,11 @@
                     <img src="public/img/logov3.svg">
                 </div>
             </header>
+
+        
+                 
             <section class="home">
-                <div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-<<<<<<< Updated upstream
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div>
+               
                 <div id = "project 1">
                     <img src="public/img/uploads/dddddd.png">
                     <div>
@@ -71,8 +55,6 @@
                     </div>
                 </div><div id = "project 1">
                     <img src="public/img/uploads/dddddd.png">
-=======
->>>>>>> Stashed changes
                     <div>
                         <div class="social">
                             <i class="fas fa-heart">600</i>
@@ -113,22 +95,9 @@
                             <i class="fas fa-heart">600</i>
                         </div>   
                     </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div>
+                
             </section>
+            
         </main>
     </div>
 

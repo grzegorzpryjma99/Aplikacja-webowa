@@ -179,5 +179,123 @@ header{
 }
 
 .logo{
+<<<<<<< Updated upstream
     text-align: auto;
+=======
+    text-align: right;
+}
+
+
+
+.cofnij{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    width: 12vw;
+    height: 7vh;
+    margin: 1px;
+}
+
+.phone{
+    display: none;
+}
+
+
+
+@media only screen and (max-device-width: 420px)
+{
+    .container{
+        flex-direction: column;
+    }
+
+    * {
+        font-size: 36px;
+    }
+
+    .login-container, .logo{
+        width: 100%;
+    }
+    
+    form{
+        margin: auto;
+    }
+
+    img{
+        height: 12em;
+        margin: 2em;
+    }
+    
+    /*dla telefonu zmieniam pasek gorny*/
+    .tekst{
+        display: none;
+    }
+    
+    .logo{
+        display: none;
+    }
+    /*
+    .phone{
+        display: grid;
+        text-align: right;
+        align-items: flex-end;
+    }
+    */
+
+    .main{
+        width: 100vw;
+    }
+
+    
+
+    header{
+        display: block;
+        background-color: #43A3B4;
+        padding: 0em,0em;
+    }
+    
+    /*Boczne*/
+    nav.site-nav{
+        display: none;
+    }
+
+
+    .hamburger{
+        display: block;
+        width: 40px;
+        height: 35px;
+        border: 0;
+        border-top: 5px solid #ffffff;
+        background: transparent;
+        position: relative;
+        transition: 0.3s transform linear;
+    }
+
+    .hamburger::before, .hamburger::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-top: 5px solid #ffffff;
+        transform: translateY(10px);
+      }
+      
+      .hamburger::after {
+        transform: translateY(25px);
+        transition: 0.3s transform linear;
+      }
+      
+      .hamburger:focus {
+        transform: rotate(45deg) translateY(5px);
+        border: none;
+      }
+      
+      .hamburger:focus::after {
+        transform: rotate(-90deg) translateX(-10px);
+      }
+
+
+>>>>>>> Stashed changes
 }
