@@ -1,0 +1,262 @@
+.add{
+    /*
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+     grid-template-areas:
+    "name macro"
+    "photo products"
+    "description steps";
+    */
+    display: grid;
+    color: teal;
+    margin: 20px;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 10px;
+
+}
+
+.add > * {
+    grid-column: col-start / span 12;
+  }
+
+.name{
+    grid-column: col-start 1/ span 6;
+    grid-row: 2;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 1em;
+    margin: 0em;
+    width: -webkit-fill-available;
+}
+.name>div{
+    background-color: white;
+    width: 32vw;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+    
+}
+
+.photo{
+    grid-column: col-start 1/ span 6;
+    grid-row: 1;
+}
+
+.photo>div{
+    background-color: white;
+    border-radius: 24px;
+    margin: 20px;
+    width: 32vw;
+    height: 30vh;
+    border: 2px solid #BCE0FD;
+}
+
+.description{
+    grid-column: col-start 1/ span 6;
+    grid-row: 3;
+
+}
+
+.description>div{
+    background-color: white;
+    width: 32vw;
+    height: 10wh;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.makro{
+    grid-column: col-start 8/ span 4;
+    grid-row: 1/2;
+}
+
+.protein{
+    grid-column: col-start 8 / span 4 ;
+    grid-row: 1/2;
+}
+
+.protein>div{
+    background-color: white;
+    width: 20vw;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.fat{
+    grid-column: col-start 8 / span 4 ;
+    grid-row: 2;
+}
+
+.fat>div{
+    background-color: white;
+    width: 20vw;
+    margin: 20px;
+    border: 2px solid #BCE0FD
+}
+
+.carbs{
+    grid-column: col-start 8 / span 4 ;
+    grid-row: 3;
+}
+
+.carbs>div{
+    background-color: white;
+    width: 20vw;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+
+.products{
+    grid-column: col-start 8 / span 10 ;
+    grid-row: 2;
+}
+
+.products>div{
+    background-color: white;
+    width: 32vw;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.steps{
+    grid-column: col-start 8 / span 11 ;
+    grid-row: 3;
+    
+}
+
+.circle>button{
+    margin: 16px;
+    width: 5vw;
+    height: 5vh;
+    background-color: teal;
+    color: white;
+    border-radius: 100%;
+}
+
+
+.dodaj{
+    grid-column: col-start 11 / span 11 ;
+    grid-row: 6;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+    width: 15vw;
+    border: 1px solid #707070;
+    color: #43A3B4;
+    margin: 1em;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+
+
+.steps{
+    display: flex;
+}
+
+.steps1>div {
+    background-color: white;
+    width: 25vw;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+}
+
+.napis{
+    
+    margin: 23px;
+}
+
+.napis1{
+    display: none;
+}
+
+@media only screen and (max-device-width: 420px){
+    .add{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .name>div{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+    }
+
+    .photo>div{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+    }
+
+    .description>div{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+        height: 20vh;
+    }
+
+    .products>div{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+        
+    }
+
+    .dodaj{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+    }
+
+    .steps{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .circle{
+        margin: auto;
+    }
+
+    .steps1{
+        margin-right: auto;
+        margin-left: auto;
+        width: 73vw;
+    }
+
+    .kroki{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+    }
+
+    .circle>button{
+        width: 12vw;
+        height: 7vh;
+    }    
+
+    .makro{
+        display: flex;
+        flex-direction: row;
+    }
+    .napis1{
+        display: block;
+    }
+
+    .protein>div{
+        margin: 13px;
+        width: 25vw;
+    }
+    .fat>div{
+        margin: 13px;
+        width: 25vw;
+    }
+    .carbs>div{
+        margin: 13px;
+        width: 25vw;
+    }
+}

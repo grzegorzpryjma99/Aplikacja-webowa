@@ -2,10 +2,7 @@
 
 class AppController{
 
-<<<<<<< Updated upstream
-    protected function render(string $template = null){
-        $templatePath = 'public/views/'.$template.'.html';
-=======
+
     private $request;
 
     public function __construct()
@@ -26,7 +23,7 @@ class AppController{
 
     protected function render(string $template = null, array $variables = []){
         $templatePath = 'public/views/'.$template.'.html'; //zmienilem z php
->>>>>>> Stashed changes
+
         $output = 'File not found';
 
         if(file_exists($templatePath)){

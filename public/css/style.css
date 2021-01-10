@@ -179,9 +179,6 @@ header{
 }
 
 .logo{
-<<<<<<< Updated upstream
-    text-align: auto;
-=======
     text-align: right;
 }
 
@@ -295,7 +292,5 @@ header{
       .hamburger:focus::after {
         transform: rotate(-90deg) translateX(-10px);
       }
-
-
->>>>>>> Stashed changes
+      
 }

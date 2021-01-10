@@ -7,13 +7,12 @@ $path = parse_url($path, PHP_URL_PATH);
 
 Routing::get('index', "DefaultController");
 Routing::get('home', "DefaultController");
-<<<<<<< Updated upstream
-=======
+
 //post('login', "SecurityController");
 Routing::get('add', "AddController");
 Routing::get('find', "FindController");
 Routing::get('profile', "ProfileController");
 
 
->>>>>>> Stashed changes
+
 Routing::run($path);

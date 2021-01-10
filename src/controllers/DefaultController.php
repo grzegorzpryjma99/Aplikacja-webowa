@@ -10,11 +10,9 @@ class DefaultController extends AppController{
     }
 
     public function home(){
-<<<<<<< Updated upstream
-        //TODO display home.html
-=======
 
->>>>>>> Stashed changes
+        //TODO display home.html
+
         $this->render('home');
 
     }
