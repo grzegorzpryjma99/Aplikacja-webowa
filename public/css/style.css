@@ -58,54 +58,29 @@ input{
 }
 
 
-@media only screen and (max-device-width: 420px)
-{
-    .container{
-        flex-direction: column;
-    }
-
-    * {
-        font-size: 36px;
-    }
-
-    .login-container, .logo{
-        width: 100%;
-    }
-    
-    form{
-        margin: auto;
-    }
-
-    img{
-        height: 12em;
-        margin: 2em;
-    }
-    
-
-}
 
 .base-container {
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: flex-start;
     height: 100vh;
 
 }
 
-
+/*to ten pasek po lewej*/
 nav{
     width: 20vw;
     height: 100%;
     background: #43A3B4 0% 0% no-repeat padding-box;
-    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
 }
 
 main{
     width: 80vw;
+    overflow: auto;
 }
 
 nav > img{
@@ -126,6 +101,7 @@ li i{
 }
 
 .button {
+    
     border: 1px solid white;
     border-radius: 1em;
     margin-left: 1em;
@@ -137,6 +113,7 @@ li i{
 }
 
 ul{
+    
     list-style-type: none;
     color: white;
     font: normal normal normal 20px/27px Segoe UI;
@@ -185,8 +162,87 @@ header{
     text-align: right;
 }
 
-.profile-container{
-    display: flex;
-    justify-content: flex-start;
-    height: 100vh;
+
+
+.cofnij{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    width: 12vw;
+    height: 7vh;
+    margin: 1px;
+}
+
+.phone{
+    display: none;
+}
+
+
+
+@media only screen and (max-device-width: 420px)
+{
+    .container{
+        flex-direction: column;
+    }
+
+    * {
+        font-size: 36px;
+    }
+
+    .login-container, .logo{
+        width: 100%;
+    }
+    
+    form{
+        margin: auto;
+    }
+
+    img{
+        height: 12em;
+        margin: 2em;
+    }
+    
+    /*dla telefonu zmieniam pasek gorny*/
+    .tekst{
+        display: none;
+    }
+    
+    .logo{
+        display: none;
+    }
+    /*
+    .phone{
+        display: grid;
+        text-align: right;
+        align-items: flex-end;
+    }
+    */
+
+    .main{
+        width: 100vw;
+    }
+
+    
+
+    header{
+        display: block;
+        background-color: #43A3B4;
+        padding: 0em,0em;
+    }
+    
+    /*Boczne*/
+    nav.site-nav{
+        display: none;
+    }
+
+
+    .hamburger{
+        display:  block;
+        background-color: tomato;
+    }
+
+
+
 }
