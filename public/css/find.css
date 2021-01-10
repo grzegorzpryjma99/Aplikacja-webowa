@@ -41,6 +41,7 @@
 .find{
     color: #43A3B4;
     display: grid;
+    height: 80%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
      grid-template-areas:
@@ -51,27 +52,39 @@
 
 .kcal{
     grid-area: kcal;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .carbs{
     grid-area: carbs;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .fat{
     grid-area: fat;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .protein{
     grid-area: protein;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
 .products{
     grid-area: products;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
 .category{
+    margin-left: auto;
+    margin-right: auto;
     grid-area: category;
     display: grid;
     text-align: center;
@@ -115,7 +128,6 @@
     border-radius: 100%;
 }
 
-
 .find>button{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
@@ -127,3 +139,29 @@
     line-height: 2.5em;
 }
 
+.steps>.button{
+    background-color: #43A3B4;
+    border: 1px solid #707070;
+    border-radius: 90px;
+    border: none;
+    height: 5vh;
+    width: 5vw;
+    color: white;
+    margin: 1em;
+}
+
+
+@media only screen and (max-device-width: 420px)
+{
+    .find{
+            
+        display: flex;
+        flex-direction: column;
+    }
+
+    .find>button{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+    }
+}
