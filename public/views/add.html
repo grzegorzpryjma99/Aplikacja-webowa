@@ -8,7 +8,7 @@
 
 <body>
 <div class="base-container">
-    <nav>
+    <nav class="site-nav">
         <img src="../img/logov2.svg">
         <u1>
             <li>
@@ -29,8 +29,11 @@
             </li>
         </u1>
     </nav>
-    <main>
+    <main class="main">
         <header>
+            <div class="hamburger">
+                <button class="hamburger">Menu</button>
+            </div>
             <div class="tekst">
                 Dodaj przepis...
             </div>
@@ -53,26 +56,31 @@
             </form>
 
             <form class= "description"action="">
+                <h class = "napis">Opis</h>
                 <div>
                     <input type="text" value="Opis" name="description" />
                 </div>
             </form>
-            
-            <form class="protein"action="">
-                <div>
-                    <input type="text" value="Białko" name="protein" />
-                </div>
-            </form>
-            <form class="fat"action="">
-                <div>
-                    <input type="text" value="Tłuszcz" name="fat" />
-                </div>
-            </form>
-            <form class="carbs"action="">
-                <div>
-                    <input type="text" value="Węglowodany" name="carbs" />
-                </div>
-            </form>
+            <h class = "napis1">Jakie makro ma twój posiłek? (100g)</h>
+            <div class= "makro">
+                
+                <form class="protein"action="">
+                    
+                    <div>
+                        <input type="text" value="Białko" name="protein" />
+                    </div>
+                </form>
+                <form class="fat"action="">
+                    <div>
+                        <input type="text" value="Tłuszcz" name="fat" />
+                    </div>
+                </form>
+                <form class="carbs"action="">
+                    <div>
+                        <input type="text" value="Węglowodany" name="carbs" />
+                    </div>
+                </form>
+            </div>
         
 
             <form class="products"action="">
@@ -80,16 +88,14 @@
                     <input type="text" value="Wymień produkty" name="products" />
                 </div>
             </form>
-
+            
             <div class="steps">
-                <form class="steps1"action="">
-                    <div>
-                        <input type="text" value="" name="step1" />
-                    </div>
-                </form>
-                <form class="steps2"action="">
-                    <div>
-                        <input type="text" value="" name="step2" />
+                
+                <div class = "circle"> <button type="submit">+</button></div>
+                <form class="steps1" action="">
+
+                    <div class="kroki">
+                        <input type="text" value="Przygotownie: krok1" name="step1" />
                     </div>
                 </form>
             </div>
