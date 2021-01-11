@@ -29,6 +29,7 @@ class Routing{
 
         $controller = self::$routes[$action]; //to zwroci nazwe kontrollera z pliku index.php
         $object = new $controller;
+        $action = $action ?: 'index';
 
         $object->$action();
 

@@ -14,11 +14,11 @@
         <u1>
             <li>
                 <i class="fas fa-plus-circle"></i>
-                <a href="#" class="button">Dodaj przepis</a>
+                <a href="add" class="button">Dodaj przepis</a>
             </li>
             <li>
                 <i class="fas fa-search"></i>
-                <a href="#" class="button">Znajdź przepis</a>
+                <a href="find" class="button">Znajdź przepis</a>
             </li>
             <li>
                 <i class="fas fa-user-friends"></i>
@@ -26,7 +26,7 @@
             </li>
             <li>
                 <i class="fas fa-cog"></i>
-                <a href="#" class="button">Wyloguj</a>
+                <a href="profile" class="button">Wyloguj</a>
             </li>
         </u1>
         </aside>
@@ -43,7 +43,6 @@
                 <img src="public/img/logov3.svg">
             </div>
 
-            
             <div class="phone">
                 <img src="public/img/logophodne.svg"><!--celowy blad bo jakies zle to logo-->
             </div>

@@ -18,15 +18,15 @@
             <ul>
                 <li>
                     <i class="fas fa-plus-circle"></i>
-                    <a href="#" class="button">Dodaj przepis</a>
+                    <a href="add" class="button">Dodaj przepis</a>
                 </li>
                 <li>
                     <i class="fas fa-search"></i>
-                    <a href="#" class="button">Znajdź przepis</a>
+                    <a href="find" class="button">Znajdź przepis</a>
                 </li>
                 <li>
                     <i class="fas fa-user-friends"></i>
-                    <a href="#" class="button">Twój profil</a>
+                    <a href="profile" class="button">Twój profil</a>
                 </li>
                 <li>
                     <i class="fas fa-cog"></i>

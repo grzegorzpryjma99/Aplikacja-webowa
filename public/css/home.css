@@ -93,4 +93,9 @@ section{
         grid-gap: 0em;
         padding: 0em;
     }
+
+    main{
+        width: 100vw;
+    }
+
 }

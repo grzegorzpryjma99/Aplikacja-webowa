@@ -22,6 +22,10 @@
 .name{
     grid-column: col-start 1/ span 6;
     grid-row: 2;
+    background-color: white;
+    width: 32vw;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
 }
 
 .input {
@@ -32,20 +36,12 @@
     margin: 0em;
     width: -webkit-fill-available;
 }
-.name>div{
-    background-color: white;
-    width: 32vw;
-    margin: 20px;
-    border: 2px solid #BCE0FD;
-    
-}
+
+
 
 .photo{
     grid-column: col-start 1/ span 6;
     grid-row: 1;
-}
-
-.photo>div{
     background-color: white;
     border-radius: 24px;
     margin: 20px;
@@ -57,16 +53,14 @@
 .description{
     grid-column: col-start 1/ span 6;
     grid-row: 3;
-
-}
-
-.description>div{
     background-color: white;
     width: 32vw;
-    height: 10wh;
+    height: 10vh;
     margin: 20px;
     border: 2px solid #BCE0FD;
+
 }
+
 
 .makro{
     grid-column: col-start 8/ span 4;
@@ -76,21 +70,16 @@
 .protein{
     grid-column: col-start 8 / span 4 ;
     grid-row: 1/2;
-}
-
-.protein>div{
     background-color: white;
     width: 20vw;
     margin: 20px;
     border: 2px solid #BCE0FD;
 }
 
+
 .fat{
     grid-column: col-start 8 / span 4 ;
     grid-row: 2;
-}
-
-.fat>div{
     background-color: white;
     width: 20vw;
     margin: 20px;
@@ -100,9 +89,6 @@
 .carbs{
     grid-column: col-start 8 / span 4 ;
     grid-row: 3;
-}
-
-.carbs>div{
     background-color: white;
     width: 20vw;
     margin: 20px;
@@ -113,9 +99,6 @@
 .products{
     grid-column: col-start 8 / span 10 ;
     grid-row: 2;
-}
-
-.products>div{
     background-color: white;
     width: 32vw;
     margin: 20px;
@@ -178,7 +161,8 @@
     .add{
         display: flex;
         flex-direction: column;
-        
+        background-color: #E2E4D8;
+        margin: 0px;
     }
     
     .name>div{
