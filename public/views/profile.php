@@ -22,11 +22,11 @@
             </li>
             <li>
                 <i class="fas fa-user-friends"></i>
-                <a href="#" class="button">Twój profil</a>
+                <a href="profile" class="button">Twój profil</a>
             </li>
             <li>
                 <i class="fas fa-cog"></i>
-                <a href="profile" class="button">Wyloguj</a>
+                <a href="logout" class="button">Wyloguj</a>
             </li>
         </u1>
         </aside>

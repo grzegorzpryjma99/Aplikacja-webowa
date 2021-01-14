@@ -25,7 +25,7 @@
             </li>
             <li>
                 <i class="fas fa-cog"></i>
-                <a href="#" class="button">Wyloguj</a>
+                <a href="logout" class="button">Wyloguj</a>
             </li>
         </u1>
     </nav>

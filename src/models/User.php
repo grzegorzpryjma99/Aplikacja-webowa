@@ -3,6 +3,7 @@
 
 class User
 {
+
     private $email;
     private $password;
     private $name;
@@ -10,7 +11,17 @@ class User
     private $town;
     private $country;
     private $description;
+/*
+    public function getId(): string
+    {
+        return $this->id;
+    }
 
+    public function setId(string $id)
+    {
+        $this->id = $id;
+    }
+*/
     public function getTown(): string
     {
         return $this->town;

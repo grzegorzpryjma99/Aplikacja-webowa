@@ -2,6 +2,7 @@
 require_once 'Repository.php';
 require_once __DIR__.'/../models/Recipe.php';
 
+
 class RecipeRepository extends Repository
 {
     public function getRecipe(int $id): ?Recipe
@@ -34,17 +35,16 @@ class RecipeRepository extends Repository
         );
     }
 
-    public function addRecipe(Recipe $recipe): void
+    public function addRecipe(Recipe $recipe)
     {
         //$data = new DataTime();
         $stmt = $this->database->connect()->prepare('
         INSERT INTO public.recipes (title,description,id_user,photo,protein,fat,carbs,products,steps,kcal,categories)
         VALUES (?,?,?,?,?,?,?,?,?,?,?)
         ');
-
-
-        //domyslnie dodaje tylko dla johna snowa id 5 //TODO
-        $id_user = 5;
+        
+        //TODO narazie pobralem to jak pobralem, zmienic inicjowanie sesji jakos
+        $id_user = $_SESSION['user'];
 
         $stmt->execute([
           $recipe->getTitle(),
@@ -57,7 +57,7 @@ class RecipeRepository extends Repository
           $recipe->getProducts(),
           $recipe->getSteps(),
           $recipe->getKcal(),
-          $recipe->getCategories(),
+          $recipe->getCategories()
         ]);
 
 
