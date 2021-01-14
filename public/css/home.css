@@ -4,7 +4,7 @@ section{
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1em;
     padding: 1em;
-    overflow: auto; 
+    overflow: auto;
 }
 
 .home>div>img{
@@ -49,13 +49,13 @@ section{
     width: 50%;
     position: relative;
 }
- 
+
 .project img{
     height: 100%;
     width: 100%;
     display: block;
 }
- 
+
 .opis{
     position: absolute;
     background:  rgba(0, 0, 0, 0.5);
@@ -65,7 +65,7 @@ section{
     top:90%;
     left: 50%;
     font-size: 20px;
-    color: #fff;   
+    color: #fff;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }

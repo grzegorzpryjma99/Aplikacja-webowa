@@ -60,4 +60,30 @@ class RecipeRepository extends Repository
 
 
     }
+
+    public function getRecipes(): array
+    {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM recipes'
+        );
+        $stmt->execute();
+        $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($recipes as $recipe) {
+            $result[] = new Recipe(
+                $recipe['title'],
+                $recipe['description'],
+                $recipe['image'],
+                $recipe['protein'],
+                $recipe['fat'],
+                $recipe['carbs'],
+                $recipe['products'],
+                $recipe['steps'],
+                $recipe['kcal'],
+                $recipe['categories']);
+        }
+        
+        return $result;
+    }
 }

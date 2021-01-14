@@ -108,7 +108,7 @@
 .steps{
     grid-column: col-start 8 / span 11 ;
     grid-row: 3;
-    
+
 }
 
 .circle>button{
@@ -149,7 +149,7 @@
 }
 
 .napis{
-    
+
     margin: 23px;
 }
 
@@ -164,7 +164,7 @@
         background-color: #E2E4D8;
         margin: 0px;
     }
-    
+
     .name>div{
         margin-right: auto;
         margin-left: auto;
@@ -188,7 +188,7 @@
         margin-right: auto;
         margin-left: auto;
         width: 88vw;
-        
+
     }
 
     .dodaj{
@@ -221,7 +221,7 @@
     .circle>button{
         width: 12vw;
         height: 7vh;
-    }    
+    }
 
     .makro{
         display: flex;

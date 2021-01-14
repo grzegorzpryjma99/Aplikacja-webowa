@@ -20,6 +20,12 @@ class AddController extends AppController{
         $this->recipeRepository = new RecipeRepository();
     }
 
+    public function home(){
+        $recipes = $this->recipeRepository->getRecipes();
+        $this->render('home',['home'=> $recipes]);
+
+    }
+
     public function add(){
         //cala logika przesylania wiadomosci
         if($this->isPost() && is_uploaded_file($_FILES['photo']['tmp_name']) && $this->validate($_FILES['photo'])){

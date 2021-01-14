@@ -71,7 +71,7 @@ input{
     .login-container, .logo{
         width: 100%;
     }
-    
+
     form{
         margin: auto;
     }
@@ -80,7 +80,7 @@ input{
         height: 12em;
         margin: 2em;
     }
-    
+
 
 }
 
@@ -96,7 +96,7 @@ nav{
     width: 20vw;
     height: 100%;
     background: #43A3B4 0% 0% no-repeat padding-box;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -152,7 +152,7 @@ li{
     margin-bottom: 1em;
 }
 
-.fa, 
+.fa,
 .fas{
     width: 1em;
 }
@@ -168,7 +168,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 1em 2em;
-   
+
 }
 
 .tekst{
@@ -214,7 +214,7 @@ header{
     .login-container, .logo{
         width: 100%;
     }
-    
+
     form{
         margin: auto;
     }
@@ -223,12 +223,12 @@ header{
         height: 12em;
         margin: 2em;
     }
-    
+
     /*dla telefonu zmieniam pasek gorny*/
     .tekst{
         display: none;
     }
-    
+
     .logo{
         display: none;
     }
@@ -244,14 +244,14 @@ header{
         width: 100vw;
     }
 
-    
+
 
     header{
         display: block;
         background-color: #43A3B4;
         padding: 0em,0em;
     }
-    
+
     /*Boczne*/
     nav.site-nav{
         display: none;
@@ -278,19 +278,19 @@ header{
         border-top: 5px solid #ffffff;
         transform: translateY(10px);
       }
-      
+
       .hamburger::after {
         transform: translateY(25px);
         transition: 0.3s transform linear;
       }
-      
+
       .hamburger:focus {
         transform: rotate(45deg) translateY(5px);
         border: none;
       }
-      
+
       .hamburger:focus::after {
         transform: rotate(-90deg) translateX(-10px);
       }
-      
+
 }

@@ -42,63 +42,22 @@
                 </div>
             </header>
 
-        
-                 
+
+
             <section class="home">
-               
-                <div id = "project 1">
-                    <img src="public/uploads/<?= $recipe->getImage() ?>">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
+                <?php foreach($home as $recipe): ?>
+                    <div id = "project 1">
+                        <img src="public/uploads/<?= $recipe->getImage(); ?>">
+                        <div>
+                            <div class="social">
+                                <h>no nie wiem</h>
+                                <i class="fas fa-heart"><?= $recipe->getKcal(); ?></i>
+                            </div>
+                        </div>
                     </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                </div><div id = "project 1">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div>
-                        <div class="social">
-                            <i class="fas fa-heart">600</i>
-                        </div>   
-                    </div>
-                
+                <?php endforeach; ?>
             </section>
             
         </main>
     </div>
-
 </body>
