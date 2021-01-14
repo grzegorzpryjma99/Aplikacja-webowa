@@ -5,9 +5,37 @@ class Recipe
 {
     private $title;
     private $description;
-    private $image;
     private $protein;
     private $fat;
+    private $carbs;
+    private $products;
+    private $steps;
+    private $kcal;
+    private $image;
+    private $categories;
+
+    public function getKcal(): int
+    {
+        return $this->kcal;
+    }
+
+
+    public function setKcal(int $kcal)
+    {
+        $this->kcal = $kcal;
+    }
+
+
+    public function getCategories(): string
+    {
+        return $this->categories;
+    }
+
+
+    public function setCategories(string $categories)
+    {
+        $this->categories = $categories;
+    }
 
 
     public function getTitle(): string
@@ -101,11 +129,8 @@ class Recipe
     {
         $this->steps = $steps;
     }
-    private $carbs;
-    private $products;
-    private $steps;
 
-    public function __construct($title, $description, $image, $protein, $fat, $carbs, $products, $steps)
+    public function __construct($title, $description, $image, $protein, $fat, $carbs, $products, $steps,$kcal,$categories)
     {
         $this->title = $title;
         $this->description = $description;
@@ -115,5 +140,7 @@ class Recipe
         $this->carbs = $carbs;
         $this->products = $products;
         $this->steps = $steps;
+        $this->kcal = $kcal;
+        $this->categories = $categories;
     }
 }

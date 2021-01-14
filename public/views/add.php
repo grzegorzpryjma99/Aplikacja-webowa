@@ -70,7 +70,7 @@
 
                 <div class= "makro">
                         <div class="protein">
-                            <input type="text" value="Białko" name="protein" />
+                            <input type="number" value="Białko" name="protein" />
                         </div>
 
                         <div class="fat">
@@ -96,6 +96,14 @@
                         </div>
                     </div>
                 </form>
+
+                <div class="kcal">
+                    <input type="number" value="kcal" name="kcal" />
+                </div>
+
+                <div class="categories">
+                    <input type="text" value="categories" name="categories" />
+                </div>
 
                 <div class="dodaj">
                     <button type="submit">Dodaj</button>
