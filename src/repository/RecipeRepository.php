@@ -42,7 +42,9 @@ class RecipeRepository extends Repository
         VALUES (?,?,?,?,?,?,?,?,?,?,?)
         ');
 
-        $id_user = 1;
+
+        //domyslnie dodaje tylko dla johna snowa id 5 //TODO
+        $id_user = 5;
 
         $stmt->execute([
           $recipe->getTitle(),
@@ -74,7 +76,7 @@ class RecipeRepository extends Repository
             $result[] = new Recipe(
                 $recipe['title'],
                 $recipe['description'],
-                $recipe['image'],
+                $recipe['photo'],
                 $recipe['protein'],
                 $recipe['fat'],
                 $recipe['carbs'],

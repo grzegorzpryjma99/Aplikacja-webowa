@@ -7,6 +7,7 @@ $path = parse_url($path, PHP_URL_PATH);
 
 Routing::get('', "DefaultController");
 Routing::get('home', "AddController");
+Routing::get('register', "SecurityController");
 
 
 Routing::get('add', "AddController");

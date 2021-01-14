@@ -7,6 +7,43 @@ class User
     private $password;
     private $name;
     private $surname;
+    private $town;
+    private $country;
+    private $description;
+
+    public function getTown(): string
+    {
+        return $this->town;
+    }
+
+    public function setTown(string $town)
+    {
+        $this->town = $town;
+    }
+
+
+    public function getCountry(): string
+    {
+        return $this->country;
+    }
+
+
+    public function setCountry(string $country)
+    {
+        $this->country = $country;
+    }
+
+
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+
+    public function setDescription(string $description)
+    {
+        $this->description = $description;
+    }
 
     public function getEmail(): string
     {
@@ -48,11 +85,14 @@ class User
         $this->surname = $surname;
     }
 
-    public function __construct(string $email, string $password, string $name, string $surname)
+    public function __construct(string $email, string $password, string $name, string $surname, string $town, string $country, string $description)
     {
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
+        $this->town = $town;
+        $this->country = $country;
+        $this->description  = $description;
     }
 }

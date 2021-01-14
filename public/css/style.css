@@ -22,7 +22,9 @@ body{
     width: 50%;
 }
 
-form.login{
+
+
+form.login, form.register{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,6 +36,11 @@ form.login{
     border: 1px solid #707070;
     border-radius: 39px;
 
+}
+
+form.register {
+    height: fit-content;
+    height: 65vh;
 }
 
 button{
@@ -293,4 +300,11 @@ header{
         transform: rotate(-90deg) translateX(-10px);
       }
 
+}
+
+.no-valid{
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
 }

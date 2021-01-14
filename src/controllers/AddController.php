@@ -37,7 +37,9 @@ class AddController extends AppController{
             $recipe = new Recipe($_POST['name'], $_POST['description'],$_FILES['photo']['name'],$_POST['protein'],$_POST['fat'],$_POST['carbs'],$_POST['products'],$_POST['step1'],$_POST['kcal'],$_POST['categories']);
             $this->recipeRepository->addRecipe($recipe);
 
-            return $this->render("home", ['message'=>$this->messages,'recipe'=>$recipe]);
+            return $this->render("home", [
+                'home'=> $this->recipeRepository->getRecipes(),
+                'message'=>$this->messages,'recipe'=>$recipe]);
         }
         $this ->render("add",['message'=>$this->messages]);
     }

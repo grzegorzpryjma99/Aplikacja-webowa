@@ -50,7 +50,6 @@
                         <img src="public/uploads/<?= $recipe->getImage(); ?>">
                         <div>
                             <div class="social">
-                                <h>no nie wiem</h>
                                 <i class="fas fa-heart"><?= $recipe->getKcal(); ?></i>
                             </div>
                         </div>
