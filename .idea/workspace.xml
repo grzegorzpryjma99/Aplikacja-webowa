@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b8a2b59-3f78-476c-9e3c-1bfa417337ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/find.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/find.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/FindController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/FindController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/RecipeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/RecipeRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/UserRepository.php" afterDir="false" />
     </list>
@@ -68,7 +63,7 @@
       <workItem from="1607794756379" duration="10294000" />
       <workItem from="1610117914196" duration="1558000" />
       <workItem from="1610306483768" duration="36254000" />
-      <workItem from="1610631889807" duration="26421000" />
+      <workItem from="1610631889807" duration="33442000" />
     </task>
     <servers />
   </component>

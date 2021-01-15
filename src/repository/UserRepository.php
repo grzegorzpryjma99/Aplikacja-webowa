@@ -16,6 +16,20 @@ class UserRepository extends Repository
 
         return $user['id'];
     }
+
+    public function geEmailByID(int $id){
+        $stmt = $this->database->connect()->prepare('
+        SELECT email FROM users WHERE id = :id
+        ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $user['email'];
+    }
+
     public function getUser(string $email): ?User{
 
         $stmt = $this->database->connect()->prepare('
@@ -86,6 +100,5 @@ class UserRepository extends Repository
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         return $data['id'];
     }
-
 
 }

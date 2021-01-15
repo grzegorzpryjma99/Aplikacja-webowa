@@ -51,16 +51,24 @@
         <section class = "profile-container">
 
 
+
+            <?php $recipes = $profile[0] ?>
+            <?php $user = $profile[1] ?>
+
             <div class=profiluzytkownika>
 
-                <img class="zdjecie" src="public/img/uploads/unnamed.jpg">
-                <div class="circle"><i class="fas fa-heart"></i></div>
-                <h class= "nazwauzytkownika">John Doe</h>
-                <article class="content">
-                    <p> Hi! My name is John, I’m a creative geek from San Francisco, CA. I enjoy creating eye candy solutions for web and mobile apps. Contact me at john@mail.com</p>
-                </article>
-                
-               
+
+                    <div>
+
+                        <img class="zdjecie" src="public/img/uploads/unnamed.jpg">
+                        <div class="circle"><i class="fas fa-heart"></i></div>
+                        <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
+                        <article class="content">
+                            <p> <?= $user->getDescription(); ?> </p>
+                        </article>
+                    </div>
+
+
                 <div class=przyciski>
                     <u1>
                         <li>
@@ -90,31 +98,16 @@
             
 
             <div class="przepisyuzytkownika">
-                <div class= "przepisy">
-                    <img src="public/img/uploads/dddddd.png">
-                    <div class="social1">
-                        <i class="fas fa-heart">600</i>
-                    </div>   
-                        
-                    
-
-                    <img src="public/img/uploads/dddddd.png">
-                    <div class="social2">
-                        <i class="fas fa-heart">600</i>
-                    </div>  
-
-                    <img src="public/img/uploads/dddddd.png">
-                    <div class="social3">
-                        <i class="fas fa-heart">600</i>
-                    </div>  
-                    <img src="public/img/uploads/dddddd.png">
-                    <div class="social4">
-                        <i class="fas fa-heart">600</i>
-                    </div>  
-                    
-
-
-                </div>
+                <?php foreach($recipes as $recipe): ?>
+                    <div class="przepisy">
+                        <img src="public/uploads/<?= $recipe->getImage(); ?>">
+                        <div>
+                            <div class="social">
+                                <i class="fas fa-heart"><?= $recipe->getKcal(); ?></i>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </section>
     </main>

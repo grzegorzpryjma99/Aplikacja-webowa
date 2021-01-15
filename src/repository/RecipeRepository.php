@@ -42,7 +42,7 @@ class RecipeRepository extends Repository
         INSERT INTO public.recipes (title,description,id_user,photo,protein,fat,carbs,products,steps,kcal,categories)
         VALUES (?,?,?,?,?,?,?,?,?,?,?)
         ');
-        
+
         //TODO narazie pobralem to jak pobralem, zmienic inicjowanie sesji jakos
         $id_user = $_SESSION['user'];
 
@@ -86,6 +86,34 @@ class RecipeRepository extends Repository
                 $recipe['categories']);
         }
         
+        return $result;
+    }
+
+    public function getUserRecipes(int $tmp): array
+    {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM public.recipes WHERE id_user = :tmp'
+        );
+
+        $stmt->bindParam(':tmp', $tmp, PDO::PARAM_INT);
+        $stmt->execute();
+        $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($recipes as $recipe) {
+            $result[] = new Recipe(
+                $recipe['title'],
+                $recipe['description'],
+                $recipe['photo'],
+                $recipe['protein'],
+                $recipe['fat'],
+                $recipe['carbs'],
+                $recipe['products'],
+                $recipe['steps'],
+                $recipe['kcal'],
+                $recipe['categories']);
+        }
+
         return $result;
     }
 }
