@@ -16,9 +16,15 @@ class ProfileController extends AppController{
 
     public function profile(){
 
+        if($_SESSION['user'] == NULL){
+            $this->render('login');
+        }
+
         $recipes = $this->recipeRepository->getUserRecipes($_SESSION['user']);
         $email = $this->userRepository->geEmailByID($_SESSION['user']);
         $user = $this->userRepository->getUser($email);
+
+
         $this->render('profile',['profile'=> [$recipes,$user]]);
 
     }

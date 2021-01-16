@@ -35,6 +35,7 @@
     bottom: 0;
 }
 */
+
 .find{
     color: #43A3B4;
     display: grid;
@@ -69,14 +70,14 @@
     grid-area: protein;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 .products{
     grid-area: products;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 .category{
@@ -87,7 +88,7 @@
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     "b1 b2 b3 b4 b5"
     "c1 c2 c3 c4 c5 ";
 }
@@ -151,7 +152,7 @@
 @media only screen and (max-device-width: 420px)
 {
     .find{
-            
+
         display: flex;
         flex-direction: column;
     }
@@ -161,4 +162,254 @@
         margin-left: auto;
         width: 88vw;
     }
+}
+
+/*slider1*/
+/*GREENS: #4ac4ac, #399988, #17694f, #0a1a17;*/
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    background-color: #333;
+}
+
+.sliderr {
+    pointer-events: none;
+    margin: 0px;
+    cursor: pointer;
+
+
+    padding-left: 30%;
+    padding-right: 30%;
+    /*height:6px;*/
+/*
+    background-color: #17694f;
+    box-sizing: border-box;
+}
+
+.sliderr.focusable {
+    border: 1px solid #222
+}
+
+.thumb {
+    cursor: pointer;
+    border-color: #333;
+    border-style: solid;
+
+    background-color: #43A3B4;;
+    background-color: #43A3B4;
+    border-radius: 50%;
+    position: absolute;
+    /*top:-6px;left:50px;
+}
+*//*
+.track {
+    pointer-events: none;
+    height: 100%;
+    background-color: #43A3B4;
+}
+
+.containerr {
+    position: relative;
+    margin: auto;
+    height: 30px;
+    width: 220px;
+}
+
+.output {
+    pointer-events: none;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50% 50% 0 50%;
+    background-color: #43A3B4;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -45px;
+
+
+;
+}
+
+.output p {
+    pointer-events: none;
+    font-size: 14px;
+    color: #0a1a17;
+    text-align: center;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+*/
+/*drugi slider*/
+body {
+    background-color: #f0f7ef;
+}
+
+.containerrr {
+    display: flex;
+    width: 500px;
+    height: 20%;
+    margin: auto;
+    text-alignt: center;
+}
+
+.sliderrr {
+    width: 100%;
+    height: 20%;
+    margin: 0% auto;
+}
+
+#start{
+    position: relative;
+    top: 19px;
+}
+
+#start2{
+    position: relative;
+    top: 19px;
+}
+#start3{
+    position: relative;
+    top: 19px;
+}
+#start4{
+    position: relative;
+    top: 19px;
+}
+
+/* track */
+input[type="range"] {
+    -webkit-appearance: none !important;
+    width: 100%;
+    height: 1px;
+    background-color: #84C1CB;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    transition: all 400ms;
+    outline:none;
+    padding: 0;
+    margin: 0;
+}
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    background-color: #ff5252;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    transition: all 400ms;
+    outline:none;
+    padding: 0;
+    margin: 0;
+}
+
+/* thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    transform:scale(0.75);
+    width: 20px;
+    height: 30px;
+    border: none;
+    background-color: #43A3B4;
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px green;
+    transition: all 400ms;
+    outline:none
+}
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none !important;
+    transform:scale(0.75);
+    width: 20px;
+    height: 30px;
+    border: none;
+    background-color: #ff5252;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px green;
+    transition: all 400ms;
+    outline:none
+}
+
+/* thumb hover */
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform:scale(0.85);
+}
+input[type="range"]::-moz-range-thumb:hover{
+    transform:scale(0.85);
+}
+
+/* thumb active */
+input[type="range"]::-webkit-slider-thumb:active {
+    transform:scale(1);
+}
+input[type="range"]::-moz-range-thumb:active{
+    transform:scale(1);
+}
+
+
+#rangevalue {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+
+#rangevalue2 {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+
+#rangevalue3 {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+#rangevalue4 {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+
+/*Dropdown*/
+/* Got a weird error when I used partials of the css and not the full minified file. There may be a partial that fixes the issue but for now the full file will do the trick. */
+.center{
+    width:375px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
 }

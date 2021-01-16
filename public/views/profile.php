@@ -10,7 +10,7 @@
 <div class="base-container">
     <nav class="site-nav" >
         <aside class="side-menu">
-        <img src="public/img/logov2.svg">
+            <a href="home"><img src="public/img/logov2.svg"></a>
         <u1>
             <li>
                 <i class="fas fa-plus-circle"></i>
@@ -40,7 +40,7 @@
                 Twój profil
             </div>
             <div class="logo">
-                <img src="public/img/logov3.svg">
+                <a href="home"><img src="public/img/logov3.svg"></a>
             </div>
 
             <div class="phone">

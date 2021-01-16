@@ -27,6 +27,11 @@ class AddController extends AppController{
     }
 
     public function add(){
+
+        if($_SESSION['user'] == NULL){
+            $this->render('login');
+        }
+
         //cala logika przesylania wiadomosci
         if($this->isPost() && is_uploaded_file($_FILES['photo']['tmp_name']) && $this->validate($_FILES['photo'])){
             move_uploaded_file(

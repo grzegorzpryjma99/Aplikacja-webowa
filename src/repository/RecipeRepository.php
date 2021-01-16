@@ -116,4 +116,40 @@ class RecipeRepository extends Repository
 
         return $result;
     }
+
+    public function getTheRecipes(int $kcalstart, int $kcalend, int $carbsstart, int $carbsend, int $fatstart, $fatend, $proteinstart, $proteinend): array
+    {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM recipes WHERE kcal > :kcalstart AND kcal < :kcalend AND carbs > :carbsstart AND carbs < :carbsend
+        AND fat > :fatstart AND fat < :fatend AND protein > :proteinstart AND protein < :proteinend
+        ');
+        $stmt->bindParam(':kcalstart', $kcalstart, PDO::PARAM_INT);
+        $stmt->bindParam(':kcalend', $kcalend, PDO::PARAM_INT);
+        $stmt->bindParam(':carbsstart', $carbsstart, PDO::PARAM_INT);
+        $stmt->bindParam(':carbsend', $carbsend, PDO::PARAM_INT);
+        $stmt->bindParam(':fatstart', $fatstart, PDO::PARAM_INT);
+        $stmt->bindParam(':fatend', $fatend, PDO::PARAM_INT);
+        $stmt->bindParam(':proteinstart', $proteinstart, PDO::PARAM_INT);
+        $stmt->bindParam(':proteinend', $proteinend, PDO::PARAM_INT);
+
+        $stmt->execute();
+        $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($recipes as $recipe) {
+            $result[] = new Recipe(
+                $recipe['title'],
+                $recipe['description'],
+                $recipe['photo'],
+                $recipe['protein'],
+                $recipe['fat'],
+                $recipe['carbs'],
+                $recipe['products'],
+                $recipe['steps'],
+                $recipe['kcal'],
+                $recipe['categories']);
+        }
+
+        return $result;
+    }
 }

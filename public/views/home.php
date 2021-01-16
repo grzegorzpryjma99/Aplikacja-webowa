@@ -8,8 +8,8 @@
 
 <body>
     <div class="base-container">
-        <nav class="site-nav">  
-            <img src="public/img/logov2.svg">
+        <nav class="site-nav">
+            <a href="home"><img src="public/img/logov2.svg"></a>
             <u1>
                 <li>
                     <i class="fas fa-plus-circle"></i>
@@ -38,7 +38,7 @@
                     Znajdź coś dla siebie...
                 </div>
                 <div class="logo">
-                    <img src="public/img/logov3.svg">
+                    <a href="home"><img src="public/img/logov3.svg"></a>
                 </div>
             </header>
 

@@ -12,7 +12,7 @@ session_start();
 <body>
     <div class="container">
         <div class="logo">
-            <img src="public/img/logo.svg">
+            <a href="home"><img src="public/img/logo.svg"></a>
         </div>
         <div class="login-container">
             <!--action- co ma byc otwarte po wyslanieu formularza , method - jaka metoda wysylam dane

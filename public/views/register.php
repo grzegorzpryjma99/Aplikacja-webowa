@@ -9,7 +9,8 @@
 <body>
 <div class="container">
     <div class="logo">
-        <img src="public/img/logo.svg">
+
+        <a href="home"><img src="public/img/logo.svg"></a>
     </div>
     <div class="login-container">
         <form class="register" action="register" method="POST">
