@@ -38,8 +38,22 @@ class AddController extends AppController{
               $_FILES['photo']['tmp_name'],
               dirname(__DIR__).self::UPLOAD_DIRETORY.$_FILES['photo']['name']
             );
+            var_dump($_POST['ilosckrokow']);
+            var_dump((int)($_POST['ilosckrokow']));
 
-            $recipe = new Recipe($_POST['name'], $_POST['description'],$_FILES['photo']['name'],$_POST['protein'],$_POST['fat'],$_POST['carbs'],$_POST['products'],$_POST['step1'],$_POST['kcal'],$_POST['categories']);
+            $tab[] = 0;
+            for( $x = 1; $x <= (int)($_POST['ilosckrokow']);  $x++ ){
+                $tmp = (string)$x;
+                $tab[$x-1] = $_POST[$tmp];
+                //w tej tablicy mam teraz po kolei kroki
+            }
+
+            var_dump($tab);
+
+            var_dump(implode("*",$tab));
+
+
+            $recipe = new Recipe($_POST['name'], $_POST['description'],$_FILES['photo']['name'],$_POST['protein'],$_POST['fat'],$_POST['carbs'],$_POST['products'],implode("*",$tab),$_POST['kcal'],$_POST['categories']);
             $this->recipeRepository->addRecipe($recipe);
 
             return $this->render("home", [

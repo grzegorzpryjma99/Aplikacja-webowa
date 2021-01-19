@@ -8,7 +8,7 @@
 
 <body>
 <div class="container">
-    <div class="logo">
+    <div class="logologin">
 
         <a href="home"><img src="public/img/logo.svg"></a>
     </div>

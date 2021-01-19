@@ -27,7 +27,7 @@
         <aside class="side-menu">
 
             <a href="home"><img src="public/img/logov2.svg"></a>
-            <ul>
+            <u1>
                 <li>
                     <i class="fas fa-plus-circle"></i>
                     <a href="add" class="button">Dodaj przepis</a>
@@ -44,7 +44,7 @@
                     <i class="fas fa-cog"></i>
                     <a href="logout" class="button">Wyloguj</a>
                 </li>
-            </ul>
+            </u1>
         </aside>
     </nav>
     <main class="main">
@@ -60,7 +60,7 @@
             </div>
             
             <div class="phone">
-                <img src="public/img/logovphone.svg">
+                <img src="public/img/logophone.svg">
             </div>
 
         </header>
@@ -139,8 +139,27 @@
                             <output id="rangevalue4">100 - 400</output>
                         </div>
                     </div>
+                    <?php var_dump(); ?>
+                    <div id="list1" class="dropdown-check-list" tabindex="100">
+                        <span class="anchor">Wybierz kategorię</span>
+                        <ul class="items">
+                            <li><input name="American" type="checkbox" />American</li>
+                            <li><input name="italian" type="checkbox" />Italian</li>
+                            <li><input name="Mexican" type="checkbox" />WMexican</li>
+                            <li><input name="Japanese" type="checkbox" />Japanese</li>
+                            <li><input name="Chinese" type="checkbox" />Chinese</li>
+                        </ul>
+                    </div>
 
 
+
+                    <script>var checkList = document.getElementById('list1');
+                        checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+                            if (checkList.classList.contains('visible'))
+                                checkList.classList.remove('visible');
+                            else
+                                checkList.classList.add('visible');
+                        }</script>
 <!--
                 </div>
 

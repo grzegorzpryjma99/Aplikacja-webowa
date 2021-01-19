@@ -50,24 +50,18 @@
 
         <section class = "profile-container">
 
-
-
             <?php $recipes = $profile[0] ?>
             <?php $user = $profile[1] ?>
 
             <div class=profiluzytkownika>
-
-
-                    <div>
-
-                        <img class="zdjecie" src="public/img/uploads/unnamed.jpg">
-                        <div class="circle"><i class="fas fa-heart"></i></div>
-                        <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
-                        <article class="content">
-                            <p> <?= $user->getDescription(); ?> </p>
-                        </article>
-                    </div>
-
+                <div>
+                    <img class="zdjecie" src="public/img/uploads/unnamed.jpg">
+                    <div class="circle"><i class="fas fa-heart"></i></div>
+                    <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
+                    <article class="content">
+                        <p> <?= $user->getDescription(); ?> </p>
+                    </article>
+                </div>
 
                 <div class=przyciski>
                     <u1>
@@ -93,6 +87,7 @@
                         </li>
                     </u1>
                 </div>
+
             </div>
 
             
@@ -109,7 +104,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+
         </section>
+
     </main>
 </div>
 

@@ -31,8 +31,7 @@ class RecipeRepository extends Repository
             $recipe['products'],
             $recipe['steps'],
             $recipe['kcal'],
-            $recipe['categories']
-        );
+            $recipe['categories']);
     }
 
     public function addRecipe(Recipe $recipe)
@@ -152,4 +151,19 @@ class RecipeRepository extends Repository
 
         return $result;
     }
+
+    public function getProdukty(): array
+    {
+        var_dump('jestem');
+        $stmt = $this->database->connect()->prepare('
+        SELECT products FROM public.recipes
+        ');
+        var_dump($stmt);
+        $stmt->execute();
+        $products = $stmt->fetch(PDO::FETCH_ASSOC);
+        var_dump($products);
+
+        return $products;
+    }
+
 }

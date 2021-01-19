@@ -7,12 +7,10 @@ class FindController extends AppController{
     public function find(){
         $recipeRepository = new RecipeRepository();
 
-
         //sprawdzam czy to POST z formularza a mam to z widoku (method="POST")
         if (!$this->isPost()) {
             return $this->render('find');
         }
-
 
        $kcalstart = $_POST['kcalstart'];
        $kcalend = $_POST['kcalend'];
@@ -22,6 +20,7 @@ class FindController extends AppController{
        $fatend = $_POST['fatend'];
        $proteinstart = $_POST['proteinstart'];
        $proteinend = $_POST['proteinend'];
+
 
         //$user = $userRepository->getUser($email);
         $recipe = $recipeRepository->getTheRecipes($kcalstart,$kcalend,$carbsstart,$carbsend,$fatstart,$fatend,$proteinstart,$proteinend);

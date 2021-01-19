@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
     <div class="container">
-        <div class="logo">
+        <div class="logologin">
             <a href="home"><img src="public/img/logo.svg"></a>
         </div>
         <div class="login-container">
@@ -30,6 +30,7 @@ session_start();
                 <input name="email" type="text" placeholder="email@gmail.com">
                 <input name="password" type="password" placeholder="password">
                 <button type="submit">login</button>
+                <a class="buttonregister" href="register">register</a>
             </form>
         </div>
     </div>

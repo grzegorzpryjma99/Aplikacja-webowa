@@ -1,3 +1,5 @@
+
+/*
 section{
     display: grid;
     grid-template-columns: repeat(2,ifr);
@@ -66,7 +68,7 @@ section{
     height: 5vh;
     background-color: teal;
     border-radius: 100%;
-    
+
 }
 
 .przepisyuzytkownika{
@@ -198,3 +200,5 @@ section{
     }
 
 }
+
+ */

@@ -40,6 +40,9 @@
                 <div class="logo">
                     <a href="home"><img src="public/img/logov3.svg"></a>
                 </div>
+                <div class="phone">
+                    <img src="public/img/logophone.svg">
+                </div>
             </header>
 
 
@@ -50,7 +53,8 @@
                         <img src="public/uploads/<?= $recipe->getImage(); ?>">
                         <div>
                             <div class="social">
-                                <i class="fas fa-heart"><?= $recipe->getKcal(); ?></i>
+
+                                <i id= "cal" class="fas fa-fire"> <?= $recipe->getKcal(); ?> kcal</i>
                             </div>
                         </div>
                     </div>

@@ -5,7 +5,6 @@ body{
     width: 100vw;
     height: 100vh;
     background: transparent linear-gradient(180deg, #F8F9F8 0%, #E2E4D8 100%) 0% 0% no-repeat padding-box;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -13,7 +12,7 @@ body{
 }
 
 
-.logo{
+.logologin{
     width: 50%;
     text-align: center;
 }
@@ -39,8 +38,7 @@ form.login, form.register{
 }
 
 form.register {
-    height: fit-content;
-    height: 65vh;
+    height: 70vh;
 }
 
 button{
@@ -51,7 +49,7 @@ button{
     width: 50%;
     border: none;
     color: #43A3B4;
-    margin: 1em;
+    margin: 0.5em;
     line-height: 2.5em;
 }
 
@@ -126,14 +124,28 @@ a{
 
 }
 
+.buttonregister{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+    width: 50%;
+    border: none;
+    color: #43A3B4;
+    margin: 0.5em;
+    line-height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+
+}
+
 li i{
     font-size: 1.5em;
     color: white;
 }
 
 .button {
-    border: 1px solid white;
-    border-radius: 1em;
+    border: 2px solid white;
+    border-radius: 2em;
     margin-left: 1em;
     text-align: center;
     letter-spacing: 0.7px;
@@ -142,7 +154,7 @@ li i{
     width: 60%;
 }
 
-ul{
+u1{
     list-style-type: none;
     color: white;
     font: normal normal normal 20px/27px Segoe UI;
@@ -154,9 +166,10 @@ ul{
 
 }
 
+
 li{
-    text-align: left;
-    margin-bottom: 1em;
+    text-align: center;
+    margin-bottom: 1.5em;
 }
 
 .fa,
@@ -175,7 +188,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 1em 2em;
-
+    height: 7em;
 }
 
 .tekst{
@@ -186,7 +199,7 @@ header{
 }
 
 .logo{
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -206,10 +219,20 @@ header{
     display: none;
 }
 
-
+.hamburger1{
+    display: none;
+}
 
 @media only screen and (max-device-width: 420px)
 {
+
+     form.login{
+         border-radius: 90px;
+     }
+
+    header{
+        height: 3em;
+    }
     .container{
         flex-direction: column;
     }
@@ -254,9 +277,9 @@ header{
 
 
     header{
-        display: block;
+        display: flex;
         background-color: #43A3B4;
-        padding: 0em,0em;
+        padding: 2em 2em;
     }
 
     /*Boczne*/
@@ -300,6 +323,28 @@ header{
         transform: rotate(-90deg) translateX(-10px);
       }
 
+    .hamburger1{
+        display: block;
+    }
+
+
+    .phone{
+        display: flex;
+    }
+
+    .phone> img{
+        margin: 0em;
+        height: 2em;
+    }
+
+    form.register{
+        height: 60vh;
+        overflow: auto;
+    }
+
+    .logologin{
+        width: 58%;
+    }
 }
 
 .no-valid{
@@ -307,4 +352,8 @@ header{
     border-radius: 1em;
     box-shadow: 0 0 0.2em red;
     outline: none;
+}
+
+a>img{
+    margin: 10px;
 }

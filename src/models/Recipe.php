@@ -13,6 +13,18 @@ class Recipe
     private $kcal;
     private $image;
     private $categories;
+    private $like;
+
+    public function getLike(): int
+    {
+        return $this->like;
+    }
+
+
+    public function setLike(int $like)
+    {
+        $this->like = $like;
+    }
 
     public function getKcal(): int
     {
@@ -124,6 +136,7 @@ class Recipe
     {
         return $this->steps;
     }
+
 
     public function setSteps(string $steps)
     {

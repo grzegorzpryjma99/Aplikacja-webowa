@@ -10,23 +10,23 @@
     display: grid;
     color: teal;
     margin: 20px;
-    grid-template-columns: repeat(12, [col-start] 1fr);
     grid-gap: 10px;
-
+    overflow: auto;
 }
 
+
 .add > * {
-    grid-column: col-start / span 12;
+
   }
 
-.name{
-    grid-column: col-start 1/ span 6;
-    grid-row: 2;
+.add>form>input{
     background-color: white;
     width: 32vw;
     margin: 20px;
     border: 2px solid #BCE0FD;
+    border-radius: 24px;
 }
+
 
 .input {
     background-color: transparent;
@@ -38,96 +38,92 @@
 }
 
 
-
-.photo{
-    grid-column: col-start 1/ span 6;
-    grid-row: 1;
+.name>input{
     background-color: white;
+    width: 32vw;
+    height: 4vh;
+    color: #43A3B4;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
     border-radius: 24px;
-    margin: 20px;
-    width: 32vw;
-    height: 30vh;
-    border: 2px solid #BCE0FD;
 }
 
-.description{
-    grid-column: col-start 1/ span 6;
-    grid-row: 3;
+.description>textarea{
     background-color: white;
     width: 32vw;
-    height: 10vh;
+    height: 20vh;
     margin: 20px;
+    color: #43A3B4;
     border: 2px solid #BCE0FD;
-
+    border-radius: 24px;
 }
-
-
-.makro{
-    grid-column: col-start 8/ span 4;
-    grid-row: 1/2;
-}
-
-.protein{
-    grid-column: col-start 8 / span 4 ;
-    grid-row: 1/2;
-    background-color: white;
-    width: 20vw;
-    margin: 20px;
-    border: 2px solid #BCE0FD;
-}
-
-
-.fat{
-    grid-column: col-start 8 / span 4 ;
-    grid-row: 2;
-    background-color: white;
-    width: 20vw;
-    margin: 20px;
-    border: 2px solid #BCE0FD
-}
-
-.carbs{
-    grid-column: col-start 8 / span 4 ;
-    grid-row: 3;
-    background-color: white;
-    width: 20vw;
-    margin: 20px;
-    border: 2px solid #BCE0FD;
-}
-
-
-.products{
-    grid-column: col-start 8 / span 10 ;
-    grid-row: 2;
+.protein>input{
     background-color: white;
     width: 32vw;
+    height: 4vh;
+    color: #43A3B4;
     margin: 20px;
     border: 2px solid #BCE0FD;
+    border-radius: 24px;
 }
 
-.steps{
-    grid-column: col-start 8 / span 11 ;
-    grid-row: 3;
-
+.fat>input{
+    background-color: white;
+    width: 32vw;
+    height: 4vh;
+    color: #43A3B4;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+    border-radius: 24px;
 }
 
-.circle>button{
-    margin: 16px;
-    width: 5vw;
-    height: 5vh;
-    background-color: teal;
-    color: white;
-    border-radius: 100%;
+.carbs>input{
+    background-color: white;
+    width: 32vw;
+    height: 4vh;
+    color: #43A3B4;
+    margin: 20px;
+    border: 2px solid #BCE0FD;
+    border-radius: 24px;
+}
+
+.products>input{
+    background-color: white;
+    width: 32vw;
+    height: 4vh;
+    margin: 20px;
+    color: #43A3B4;
+    border: 2px solid #BCE0FD;
+    border-radius: 24px;
+}
+
+
+.kcal>input{
+    background-color: white;
+    width: 32vw;
+    height: 4vh;
+    margin: 20px;
+    color: #43A3B4;
+    border: 2px solid #BCE0FD;
+    border-radius: 24px;
+}
+.categories>input{
+    background-color: white;
+    width: 32vw;
+    height: 4vh;
+    margin: 20px;
+    color: #43A3B4;
+    border: 2px solid #BCE0FD;
+    border-radius: 24px;
 }
 
 
 .dodaj{
-    grid-column: col-start 11 / span 11 ;
-    grid-row: 6;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     border-radius: 27px;
     width: 15vw;
+
     border: 1px solid #707070;
     color: #43A3B4;
     margin: 1em;
@@ -136,17 +132,16 @@
 }
 
 
-
-.steps{
-    display: flex;
+#dynamic-list{
+    list-style-type: none;
+    text-align: start;
 }
 
-.steps1>div {
-    background-color: white;
-    width: 25vw;
-    margin: 20px;
-    border: 2px solid #BCE0FD;
+#dynamic-list>li{
+    text-align: start;
 }
+
+
 
 .napis{
 
@@ -165,26 +160,26 @@
         margin: 0px;
     }
 
-    .name>div{
-        margin-right: auto;
-        margin-left: auto;
+    .name>input{
         width: 88vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .photo>div{
-        margin-right: auto;
-        margin-left: auto;
         width: 88vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .description>div{
-        margin-right: auto;
-        margin-left: auto;
-        width: 88vw;
+    .description>textarea{
+        width: 95vw;
         height: 20vh;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .products>div{
+    .products>input{
         margin-right: auto;
         margin-left: auto;
         width: 88vw;
@@ -226,21 +221,160 @@
     .makro{
         display: flex;
         flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
     }
     .napis1{
         display: block;
     }
 
-    .protein>div{
+    .protein>input{
         margin: 13px;
-        width: 25vw;
+        width: 21vw;
     }
-    .fat>div{
+    .fat>input{
         margin: 13px;
-        width: 25vw;
+        width: 21vw;
     }
-    .carbs>div{
+    .carbs>input{
         margin: 13px;
-        width: 25vw;
+        width: 21vw;
     }
+
+    .kcal>input{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+    }
+
+    .categories>input{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88vw;
+
+    }
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #eeeeee;
+}
+
+.file-upload {
+    padding: 20px;
+    grid-column: col-start 1/ span 6;
+    grid-row: 1;
+    background-color: white;
+    border-radius: 24px;
+    margin: 20px;
+    width: 32vw;
+    height: auto;
+    border: 2px solid #BCE0FD;
+}
+
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #43A3B4 ;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover {
+    background: #5cb7cb;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #43A3B4;
+    position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color:#5cb7cb;
+    border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #43A3B4;
+    padding: 60px 0;
+}
+
+.file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #43A3B4;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.remove-image:hover {
+    background: #5cb7cb;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+input#candidate{
+    display: none;
 }

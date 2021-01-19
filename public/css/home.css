@@ -24,9 +24,9 @@ section{
     position: relative;
     background: #FFFFFF8C 0% 0% no-repeat padding-box;
     width: 98%;
-    padding: 1%;
     text-align: center;
-    top: -11%;
+    padding: 1%;
+    top: -10%;
     left: 50%;
     font-size: 20px;
     color: black;
@@ -78,6 +78,10 @@ section{
         flex-direction: column;
     }
 
+    .home>div{
+        height: 40%;
+    }
+
     .home>div>img {
         height: auto;
         width: -webkit-fill-available;
@@ -86,7 +90,7 @@ section{
 
     .home>div>div{
         width: 81%;
-        top: -21.5%;
+        top: -24.5%;
         padding: 2.3%;
     }
     section{
@@ -98,4 +102,14 @@ section{
         width: 100vw;
     }
 
+}
+
+
+
+#lik{
+    width: 8em;
+}
+
+#cal{
+    width: 8em;
 }
