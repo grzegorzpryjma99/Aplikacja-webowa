@@ -54,21 +54,21 @@
                 <?php $user = $profile[1] ?>
 
                 <div class=profiluzytkownika>
-                    <div>
+                    <div class="foto">
                         <img class="zdjecie" src="public/img/uploads/unnamed.jpg">
-                        <div class="circle"><i class="fas fa-heart"></i></div>
-                        <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
+                        <div class="where" >
+                            <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
+                            <h class= "nazwauzytkownika"><br><?= $user->getCountry(); ?></h>
+                            <h class= "nazwauzytkownika">, <?= $user->getTown(); ?></h>
+                        </div>
+                    </div>
                         <article class="content">
                             <p> <?= $user->getDescription(); ?> </p>
                         </article>
-                    </div>
+
 
                     <div class=przyciski>
-                        <u1>
-                            <li>
-                                <i class="fas fa-plus-circle"></i>
-                                <a href="#" class="button">Powiadomienia</a>
-                            </li>
+                        <ul>
                             <li>
                                 <i class="fas fa-search"></i>
                                 <a href="#" class="button">Ustawienia</a>
@@ -85,7 +85,7 @@
                                 <i class="fas fa-cog"></i>
                                 <a href="#" class="button">Help</a>
                             </li>
-                        </u1>
+                        </ul>
                     </div>
 
                 </div>

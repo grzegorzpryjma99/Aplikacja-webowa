@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type= "text/css" href="public/css/find.css">
+
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
+    <link rel="stylesheet" type= "text/css" href="public/css/find.css">
+
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="./public/js/slider2.js" defer></script>
@@ -64,14 +66,14 @@
             </div>
 
         </header>
-        <section class="find">
+        <section>
 
             <form class="find" action="find" method="POST">
 
                 <div class="kcal">
                     <div class="kcalicon">
                         <label for="kacl">Kcal</label>
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-fire"></i>
                     </div>
                     <div class="containerrr">
                         <div class="sliderrr">
@@ -85,7 +87,7 @@
                 <div class="carbs">
                     <div class="kcalicon">
                         <label for="carbs">Węglowodany</label>
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-fire"></i>
                     </div>
                     <div class="containerrr">
                         <div class="sliderrr">
@@ -99,28 +101,13 @@
                 <div class="fat">
                     <div class="kcalicon">
                         <label for="fat">Tłuszcz</label>
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-fire"></i>
                     </div>
                     <div class="containerrr">
                         <div class="sliderrr">
                             <input id="start3" name="fatstart" value=100 type = "range" min="0" max="500" oninput="rangevalue3.value=value+' - '+end3.value"/>
                             <input id="end3" name="fatend" value=400 type = "range" min="0" max="500" oninput="rangevalue3.value=start3.value+' - '+value"/>
                             <output id="rangevalue3">100 - 400</output>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="protein">
-                    <div class="kcalicon">
-                        <label for="protein">Białko</label>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="containerrr">
-                        <div class="sliderrr">
-                            <input id="start4" name="proteinstart" value=100 type = "range" min="0" max="500" oninput="rangevalue4.value=value+' - '+end4.value"/>
-                            <input id="end4" name="proteinend" value=400 type = "range" min="0" max="500" oninput="rangevalue4.value=start4.value+' - '+value"/>
-                            <output id="rangevalue4">100 - 400</output>
                         </div>
                     </div>
                 </div>
@@ -135,6 +122,21 @@
                         <li><input name="Chinese" type="checkbox" />Chinese</li>
                     </ul>
                 </div>
+                <div class="protein">
+                    <div class="kcalicon">
+                        <label for="protein">Białko</label>
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="containerrr">
+                        <div class="sliderrr">
+                            <input id="start4" name="proteinstart" value=100 type = "range" min="0" max="500" oninput="rangevalue4.value=value+' - '+end4.value"/>
+                            <input id="end4" name="proteinend" value=400 type = "range" min="0" max="500" oninput="rangevalue4.value=start4.value+' - '+value"/>
+                            <output id="rangevalue4">100 - 400</output>
+                        </div>
+                    </div>
+                </div>
+
+
 
 
 

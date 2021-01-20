@@ -49,11 +49,10 @@
 
             <section class="home">
                 <?php foreach($home as $recipe): ?>
-                    <div id = "project 1">
+                    <div id = "project1">
                         <img src="public/uploads/<?= $recipe->getImage(); ?>">
                         <div>
                             <div class="social">
-
                                 <i id= "cal" class="fas fa-fire"> <?= $recipe->getKcal(); ?> kcal</i>
                             </div>
                         </div>

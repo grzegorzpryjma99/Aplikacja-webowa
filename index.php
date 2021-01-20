@@ -16,6 +16,7 @@ Routing::get('register', "SecurityController");
 Routing::get('add', "AddController");
 Routing::get('find', "FindController");
 Routing::get('profile', "ProfileController");
+Routing::get('recipe', "AddController");
 
 Routing::post('login', "SecurityController");
 Routing::post('logout', "SecurityController");

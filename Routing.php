@@ -24,7 +24,7 @@ class Routing{
         $action = explode("/", $url)[0];
 
         if(!array_key_exists($action, self::$routes)){
-            die("Wrong url");
+            die("Wrong urlllll");
         }
 
         $controller = self::$routes[$action]; //to zwroci nazwe kontrollera z pliku index.php

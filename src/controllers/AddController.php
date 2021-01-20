@@ -77,4 +77,10 @@ class AddController extends AppController{
 
         return true;
     }
+
+    public function recipe(){
+        $recipes = $this->recipeRepository->getRecipes();
+        $this->render('recipe',['recipe'=> $recipes]);
+
+    }
 }
