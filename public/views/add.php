@@ -30,6 +30,7 @@
             </li>
         </u1>
     </nav>
+
     <main class="main">
         <header>
             <div class="hamburger1">
@@ -47,20 +48,14 @@
 
         </header>
 
-        <section class="add">
-            <form action="add" method="POST" ENCTYPE="multipart/form-data"> <!--mam akcje wiec daje wpis do index.php-->
+
+            <form class="add" action="add" method="POST" ENCTYPE="multipart/form-data"> <!--mam akcje wiec daje wpis do index.php-->
                 <?php if(isset($messages)){
                     foreach ($messages as $message) {
                         echo $message;
                     }
                 }
                 ?>
-
-                <div class="name">
-                    <input type="text" placeholder="Nazwa" name="name" />
-                </div>
-
-                <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
                 <div class="photo">
                     <div class="file-upload">
@@ -82,46 +77,60 @@
 
                 </div>
 
-                <h class = "napis">Opis</h>
-                <div class="description">
-                    <textarea name="description" rows="5" placeholder="Opis"></textarea>
-                </div>
-
-                <h class = "napis1">Jakie makro ma twój posiłek? (100g)</h>
-
                 <div class= "makro">
-                        <div class="protein">
-                            <input type="number" placeholder="Białko" name="protein" />
-                        </div>
+                    <h class = "napis">Jakie makro ma twój posiłek? (100g)</h>
+                    <div class="protein">
+                        <input type="number" placeholder="Białko" name="protein" />
+                    </div>
 
-                        <div class="fat">
-                            <input type="number" placeholder="Tłuszcz" name="fat" />
-                        </div>
+                    <div class="fat">
+                        <input type="number" placeholder="Tłuszcz" name="fat" />
+                    </div>
 
-                        <div class="carbs">
-                            <input type="number" placeholder="Węglowodany" name="carbs" />
-                        </div>
+                    <div class="carbs">
+                        <input type="number" placeholder="Węglowodany" name="carbs" />
+                    </div>
                 </div>
+
+
+                <div class="name">
+                    <h class = "napis">Nazwa twojego przepisu</h>
+                    <input type="text" placeholder="Nazwa" name="name" />
+                </div>
+
+
+
+                <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
 
                 <div class="kcal">
+                    <h class = "napis">Jaką kaloryczność ma twój posiłek? (100g)</h>
                     <input type="number" placeholder="kcal" name="kcal" />
                 </div>
 
                 <div class="products">
+                    <h class = "napis">Wymień produkty które są potrzebne. Do oddzielenia użyj przecinka</h>
                     <input type="text" placeholder="Wymień produkty" name="products" />
                 </div>
 
 
 
                 <div class="categories">
+                    <h class = "napis">Kategoria twojego posiłku</h>
                     <input type="text" placeholder="categories" name="categories" />
                 </div>
 
+                <div class="description">
+                    <h class = "napis">Opis</h>
+                    <textarea name="description" rows="5" placeholder="Opis"></textarea>
+                </div>
 
-                <input  placeholder="Przygotowanie: podaj kroki" type="text" id="candidate"/>
-                <button type="button" onclick="addItem()">Dodaj krok</button>
-                <!--<button type="button" onclick="removeItem()">Cofnij</button>-->
-                <ul id="dynamic-list"></ul>
+                <div class="kroki">
+                    <input  placeholder="Przygotowanie: podaj kroki" type="text" id="candidate"/>
+                    <button type="button" onclick="addItem()">Dodaj krok</button>
+                    <!--<button type="button" onclick="removeItem()">Cofnij</button>-->
+                    <ul id="dynamic-list"></ul>
+                </div>
 <!--
                 <div class="panel-heading">
                     <div class="panel-body">
@@ -149,16 +158,14 @@
                 </div>
 
             </form>
-</div>
 
-
-
-
-
-
-
-</section>
     </main>
 </div>
-</div>
 </body>
+
+
+
+
+
+
+

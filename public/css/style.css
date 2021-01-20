@@ -108,9 +108,7 @@ nav{
 
 }
 
-main{
-    width: 80vw;
-}
+
 
 nav > img{
     width: 60%;
@@ -182,6 +180,8 @@ main{
     flex-direction: column;
     height: 100vh;
     background: #E2E4D8 0% 0% no-repeat padding-box;
+    width: 80vw;
+
 }
 
 header{

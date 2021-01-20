@@ -12,6 +12,7 @@ class FindController extends AppController{
             return $this->render('find');
         }
 
+        var_dump($_POST['kategor']);
        $kcalstart = $_POST['kcalstart'];
        $kcalend = $_POST['kcalend'];
        $carbsstart = $_POST['carbsstart'];

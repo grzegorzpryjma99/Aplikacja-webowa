@@ -1,16 +1,10 @@
 .add{
-    /*
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-     grid-template-areas:
-    "name macro"
-    "photo products"
-    "description steps";
-    */
-    display: grid;
     color: teal;
     margin: 20px;
-    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1em;
+    padding: 1em;
     overflow: auto;
 }
 
@@ -255,15 +249,10 @@
     }
 }
 
-body {
-    font-family: sans-serif;
-    background-color: #eeeeee;
-}
 
 .file-upload {
     padding: 20px;
-    grid-column: col-start 1/ span 6;
-    grid-row: 1;
+
     background-color: white;
     border-radius: 24px;
     margin: 20px;
@@ -377,4 +366,19 @@ body {
 
 input#candidate{
     display: none;
+}
+
+.kroki>button{
+    background-color: #43A3B4;
+    color: white;
+}
+
+.kroki>ul>input{
+    background-color: white;
+    width: 32vw;
+    height: 4vh;
+    margin: 20px;
+    color: #43A3B4;
+    border: 2px solid #BCE0FD;
+    border-radius: 24px;
 }

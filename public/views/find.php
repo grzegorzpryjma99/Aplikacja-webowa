@@ -68,22 +68,6 @@
 
             <form class="find" action="find" method="POST">
 
-
-    <!--
-                <div class="containerr">
-                    <div class="sliderr">
-                        <div class="track"></div>
-                    </div>
-                    <div class="output o0"> </div>
-                    <div class="thumb t0"></div>
-
-                    <div class="output o1"> </div>
-                    <div class="thumb t1"></div>
-                </div>
-                -->
-
-
-
                 <div class="kcal">
                     <div class="kcalicon">
                         <label for="kacl">Kcal</label>
@@ -139,17 +123,18 @@
                             <output id="rangevalue4">100 - 400</output>
                         </div>
                     </div>
-                    <?php var_dump(); ?>
-                    <div id="list1" class="dropdown-check-list" tabindex="100">
-                        <span class="anchor">Wybierz kategorię</span>
-                        <ul class="items">
-                            <li><input name="American" type="checkbox" />American</li>
-                            <li><input name="italian" type="checkbox" />Italian</li>
-                            <li><input name="Mexican" type="checkbox" />WMexican</li>
-                            <li><input name="Japanese" type="checkbox" />Japanese</li>
-                            <li><input name="Chinese" type="checkbox" />Chinese</li>
-                        </ul>
-                    </div>
+                </div>
+
+                <div id="list1" class="dropdown-check-list" tabindex="100">
+                    <span class="anchor">Wybierz kategorię</span>
+                    <ul class="items">
+                        <li><input name="American" type="checkbox" />American</li>
+                        <li><input name="italian" type="checkbox" />Italian</li>
+                        <li><input name="Mexican" type="checkbox" />WMexican</li>
+                        <li><input name="Japanese" type="checkbox" />Japanese</li>
+                        <li><input name="Chinese" type="checkbox" />Chinese</li>
+                    </ul>
+                </div>
 
 
 

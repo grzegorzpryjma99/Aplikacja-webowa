@@ -1,4 +1,12 @@
-
+.profile-container{
+    color: teal;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1em;
+    padding: 1em;
+    overflow: auto;
+}
 /*
 section{
     display: grid;
