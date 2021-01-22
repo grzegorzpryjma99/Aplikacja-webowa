@@ -4,6 +4,7 @@
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/script3.js" defer></script>
+    <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
     <title>ADD</title>
 </head>
 
@@ -78,17 +79,19 @@
                 </div>
 
                 <div class= "makro">
-                    <h class = "napis">Jakie makro ma twój posiłek? (100g)</h>
-                    <div class="protein">
-                        <input type="number" placeholder="Białko" name="protein" />
-                    </div>
+                    <div><h class = "napis">Jakie makro ma twój posiłek? (100g)</h></div>
+                    <div class="macro">
+                        <div class="protein">
+                            <input type="number" placeholder="Białko" name="protein" />
+                        </div>
 
-                    <div class="fat">
-                        <input type="number" placeholder="Tłuszcz" name="fat" />
-                    </div>
+                        <div class="fat">
+                            <input type="number" placeholder="Tłuszcz" name="fat" />
+                        </div>
 
-                    <div class="carbs">
-                        <input type="number" placeholder="Węglowodany" name="carbs" />
+                        <div class="carbs">
+                            <input type="number" placeholder="Węglowodany" name="carbs" />
+                        </div>
                     </div>
                 </div>
 
@@ -151,8 +154,9 @@
 -->
 
 
-                <input name="ilosckrokow" value=3 id="candidate" />
+                <input name="ilosckrokow" value="4" id="candidate" />
 
+                <div></div>
                 <div class="dodaj">
                     <button type="submit">Dodaj</button>
                 </div>

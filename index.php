@@ -22,4 +22,6 @@ Routing::post('login', "SecurityController");
 Routing::post('logout', "SecurityController");
 Routing::post('add', "AddController");
 
+Routing::get('like', "AddController");
+
 Routing::run($path);

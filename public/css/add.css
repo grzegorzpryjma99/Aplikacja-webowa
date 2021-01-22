@@ -50,7 +50,9 @@
     color: #43A3B4;
     border: 2px solid #BCE0FD;
     border-radius: 24px;
+    outline: 0;
 }
+
 .protein>input{
     background-color: white;
     width: 32vw;
@@ -117,12 +119,13 @@
     border: 1px solid #707070;
     border-radius: 27px;
     width: 15vw;
-
     border: 1px solid #707070;
     color: #43A3B4;
     margin: 1em;
     line-height: 2.5em;
     text-align: center;
+    margin-left: auto;
+    outline: 0;
 }
 
 
@@ -144,109 +147,6 @@
 
 .napis1{
     display: none;
-}
-
-@media only screen and (max-device-width: 420px){
-    .add{
-        display: flex;
-        flex-direction: column;
-        background-color: #E2E4D8;
-        margin: 0px;
-    }
-
-    .name>input{
-        width: 88vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .photo>div{
-        width: 88vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .description>textarea{
-        width: 95vw;
-        height: 20vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .products>input{
-        margin-right: auto;
-        margin-left: auto;
-        width: 88vw;
-
-    }
-
-    .dodaj{
-        margin-right: auto;
-        margin-left: auto;
-        width: 88vw;
-    }
-
-    .steps{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .circle{
-        margin: auto;
-    }
-
-    .steps1{
-        margin-right: auto;
-        margin-left: auto;
-        width: 73vw;
-    }
-
-    .kroki{
-        margin-right: auto;
-        margin-left: auto;
-        width: 88vw;
-    }
-
-    .circle>button{
-        width: 12vw;
-        height: 7vh;
-    }
-
-    .makro{
-        display: flex;
-        flex-direction: row;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .napis1{
-        display: block;
-    }
-
-    .protein>input{
-        margin: 13px;
-        width: 21vw;
-    }
-    .fat>input{
-        margin: 13px;
-        width: 21vw;
-    }
-    .carbs>input{
-        margin: 13px;
-        width: 21vw;
-    }
-
-    .kcal>input{
-        margin-right: auto;
-        margin-left: auto;
-        width: 88vw;
-    }
-
-    .categories>input{
-        margin-right: auto;
-        margin-left: auto;
-        width: 88vw;
-
-    }
 }
 
 
@@ -371,6 +271,7 @@ input#candidate{
 .kroki>button{
     background-color: #43A3B4;
     color: white;
+    outline: 0;
 }
 
 .kroki>ul>input{
@@ -381,4 +282,116 @@ input#candidate{
     color: #43A3B4;
     border: 2px solid #BCE0FD;
     border-radius: 24px;
+}
+
+
+@media only screen and (max-device-width: 420px){
+    .add{
+        display: flex;
+        flex-direction: column;
+        background-color: #E2E4D8;
+        margin: 0px;
+    }
+
+    .kroki>ul>input {
+        width: 80%;
+    }
+
+    .name>input{
+        width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .photo>div{
+        width: 88vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .description>textarea{
+        width: 91vw;
+        height: 20vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .products>input{
+        margin-right: auto;
+        margin-left: auto;
+        width: 85vw;
+
+    }
+
+    .dodaj{
+        margin-right: auto;
+        margin-left: auto;
+        width: 85vw;
+    }
+
+    .steps{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .circle{
+        margin: auto;
+    }
+
+    .steps1{
+        margin-right: auto;
+        margin-left: auto;
+        width: 73vw;
+    }
+
+    .kroki{
+        margin-right: auto;
+        margin-left: auto;
+        width: 85vw;
+    }
+
+    .circle>button{
+        width: 12vw;
+        height: 7vh;
+    }
+
+    .macro{
+        display: flex;
+    }
+
+    .makro{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .napis1{
+        display: block;
+    }
+
+    .protein>input{
+        margin: 13px;
+        width: 21vw;
+    }
+    .fat>input{
+        margin: 13px;
+        width: 21vw;
+    }
+    .carbs>input{
+        margin: 13px;
+        width: 21vw;
+    }
+
+    .kcal>input{
+        margin-right: auto;
+        margin-left: auto;
+        width: 85vw;
+    }
+
+    .categories>input{
+        margin-right: auto;
+        margin-left: auto;
+        width: 85vw;
+
+    }
 }

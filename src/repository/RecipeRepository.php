@@ -24,15 +24,18 @@ class RecipeRepository extends Repository
         return new Recipe(
             $recipe['title'],
             $recipe['description'],
-            $recipe['image'],
+            $recipe['photo'],
             $recipe['protein'],
             $recipe['fat'],
             $recipe['carbs'],
             $recipe['products'],
             $recipe['steps'],
             $recipe['kcal'],
-            $recipe['categories']);
+            $recipe['categories'],
+            $recipe['like'],
+            $recipe['id']);
     }
+
 
     public function addRecipe(Recipe $recipe)
     {
@@ -82,7 +85,9 @@ class RecipeRepository extends Repository
                 $recipe['products'],
                 $recipe['steps'],
                 $recipe['kcal'],
-                $recipe['categories']);
+                $recipe['categories'],
+                $recipe['like'],
+                $recipe['id']);
         }
         
         return $result;
@@ -110,7 +115,9 @@ class RecipeRepository extends Repository
                 $recipe['products'],
                 $recipe['steps'],
                 $recipe['kcal'],
-                $recipe['categories']);
+                $recipe['categories'],
+                $recipe['like'],
+                $recipe['id']);
         }
 
         return $result;
@@ -146,7 +153,9 @@ class RecipeRepository extends Repository
                 $recipe['products'],
                 $recipe['steps'],
                 $recipe['kcal'],
-                $recipe['categories']);
+                $recipe['categories'],
+                $recipe['like'],
+                $recipe['id']);
         }
 
         return $result;
@@ -166,4 +175,12 @@ class RecipeRepository extends Repository
         return $products;
     }
 
+    public function like(int $id){
+        $stmt = $this->database->connect()->prepare('
+        UPDATE recipes SET "like" = "like" + 1 WHERE id = :id
+        ');
+
+        $stmt->bindParam(":id",$id,PDO::PARAM_INT);
+        $stmt->execute();
+    }
 }

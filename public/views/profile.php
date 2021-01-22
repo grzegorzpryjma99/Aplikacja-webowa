@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type= "text/css" href="public/css/style.css">
-    <link rel="stylesheet" type= "text/css" href="public/css/profile.css">
 
+    <link rel="stylesheet" type= "text/css" href="public/css/profile.css">
+    <link rel="stylesheet" type= "text/css" href="public/css/style.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
+
     <title>PROFILE</title>
 </head>
 
@@ -44,7 +47,7 @@
                 </div>
 
                 <div class="phone">
-                    <img src="public/img/logophodne.svg"><!--celowy blad bo jakies zle to logo-->
+                    <img src="public/img/logophone.svg">
                 </div>
             </header>
 
@@ -68,22 +71,22 @@
 
 
                     <div class=przyciski>
-                        <ul>
+                        <ul class="lista">
                             <li>
-                                <i class="fas fa-search"></i>
-                                <a href="#" class="button">Ustawienia</a>
+                                <i style="color:#43A3B4;" class="fas fa-search"></i>
+                                <a href="#" class="butt">Ustawienia</a>
                             </li>
                             <li>
-                                <i class="fas fa-user-friends"></i>
-                                <a href="#" class="button">Prywatność</a>
+                                <i style="color:#43A3B4;" class="fas fa-user-friends"></i>
+                                <a href="#" class="butt">Prywatność</a>
                             </li>
                             <li>
-                                <i class="fas fa-cog"></i>
-                                <a href="#" class="button">Wyloguj</a>
+                                <i style="color:#43A3B4;" class="fas fa-cog"></i>
+                                <a href="logout" class="butt">Wyloguj</a>
                             </li>
                             <li>
-                                <i class="fas fa-cog"></i>
-                                <a href="#" class="button">Help</a>
+                                <i style="color:#43A3B4;" class="fas fa-cog"></i>
+                                <a href="#" class="butt">Help</a>
                             </li>
                         </ul>
                     </div>
@@ -92,18 +95,22 @@
 
 
 
-                <div class="przepisyuzytkownika">
+                <form class="przepisyuzytkownika" action="recipe" method="POST" ENCTYPE="multipart/form-data">
                     <?php foreach($recipes as $recipe): ?>
-                        <div class="przepisy">
-                            <img src="public/uploads/<?= $recipe->getImage(); ?>">
-                            <div>
-                                <div class="social">
-                                    <i class="fas fa-heart"><?= $recipe->getKcal(); ?></i>
+
+                        <div class="project2" id = "project1">
+                            <button class= "baton" name="activeRecipe" value="<?= $recipe->getKcal(); ?>" >
+                                <img class="img" src="public/uploads/<?= $recipe->getImage(); ?>">
+                                <div class="przep">
+                                    <div class="social">
+                                        <i id= "cal" class="fas fa-fire"> <?= $recipe->getKcal(); ?> kcal</i>
+                                    </div>
                                 </div>
-                            </div>
+                            </button>
                         </div>
+
                     <?php endforeach; ?>
-                </div>
+                </form>
 
             </section>
         </main>

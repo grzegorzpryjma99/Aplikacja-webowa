@@ -21,6 +21,8 @@ class AddController extends AppController{
     }
 
     public function home(){
+
+
         $recipes = $this->recipeRepository->getRecipes();
         $this->render('home',['home'=> $recipes]);
 
@@ -38,8 +40,6 @@ class AddController extends AppController{
               $_FILES['photo']['tmp_name'],
               dirname(__DIR__).self::UPLOAD_DIRETORY.$_FILES['photo']['name']
             );
-            var_dump($_POST['ilosckrokow']);
-            var_dump((int)($_POST['ilosckrokow']));
 
             $tab[] = 0;
             for( $x = 1; $x <= (int)($_POST['ilosckrokow']);  $x++ ){
@@ -79,8 +79,14 @@ class AddController extends AppController{
     }
 
     public function recipe(){
-        $recipes = $this->recipeRepository->getRecipes();
+
+        $recipes = $this->recipeRepository->getRecipe($_POST['activeRecipe']);
         $this->render('recipe',['recipe'=> $recipes]);
 
+    }
+
+    public function like(int $id){
+        $this->recipeRepository->like($id);
+        http_response_code(200);
     }
 }

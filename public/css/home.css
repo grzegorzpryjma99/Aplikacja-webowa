@@ -7,14 +7,14 @@
     overflow: auto;
 }
 
-.home>div>img{
+.img{
     height: auto;
     width: -webkit-fill-available;
     object-fit: cover;
     border-radius: 0 0 0 0;
 }
 
-.home>div>div{
+.przep{
     height: 15%;
     color: black;
     margin: 0em;
@@ -26,7 +26,7 @@
     width: 98%;
     text-align: center;
     padding: 1%;
-    top: -10%;
+    top: -12%;
     left: 50%;
     font-size: 20px;
     color: black;
@@ -34,40 +34,11 @@
     -ms-transform: translate(-50%, -50%);
 }
 
-.home.div{
-    border: 1px solid gray;
-    border-radius: 1em 1em 0 0;
-    height: 400px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.project1{
-    float: left;
-    width: 50%;
-    position: relative;
-}
-
-.project img{
-    height: 100%;
+.baton{
     width: 100%;
-    display: block;
-}
-
-.opis{
-    position: absolute;
-    background:  rgba(0, 0, 0, 0.5);
-    width: 98%;
-    padding: 1%;
-    text-align: center;
-    top:90%;
-    left: 50%;
-    font-size: 20px;
-    color: #fff;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    height: 100%;
+    background-color: transparent;
+    outline: 0;
 }
 
 
@@ -75,22 +46,25 @@
 @media only screen and (max-device-width: 420px){
     .home{
         display: flex;
+        width: 90%;
+        grid-gap: 0em;
         flex-direction: column;
     }
 
-    .home>div{
+    .project2{
         height: 40%;
     }
 
-    .home>div>img {
+    .img {
         height: auto;
         width: -webkit-fill-available;
         border-radius: 0 0 0 0;
     }
 
-    .home>div>div{
-        width: 81%;
-        top: -24.5%;
+    .przep{
+        width: 79%;
+        top: -27.3%;
+        height: 10%;
         padding: 2.3%;
     }
     section{
@@ -101,6 +75,8 @@
     main{
         width: 100vw;
     }
+
+
 
 }
 
@@ -113,3 +89,4 @@
 #cal{
     width: 8em;
 }
+

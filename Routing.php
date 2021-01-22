@@ -21,18 +21,20 @@ class Routing{
 
     public static function run ($url) {//uruchomienie danego konntrolera przypisanego pod dany url
 
-        $action = explode("/", $url)[0];
+        $urlParts = explode("/", $url);
+        $action = $urlParts[0];
 
         if(!array_key_exists($action, self::$routes)){
-            die("Wrong urlllll");
+            die("Wrong url");
         }
 
         $controller = self::$routes[$action]; //to zwroci nazwe kontrollera z pliku index.php
         $object = new $controller;
         $action = $action ?: 'index';
 
-        $object->$action();
+        $id = $urlParts[1] ?? '';
 
+        $object->$action($id);
 
     }
 

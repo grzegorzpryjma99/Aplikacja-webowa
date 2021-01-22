@@ -39,6 +39,7 @@ function addItem(){
     var candidate = document.getElementById("candidate");
     var input = document.createElement("input");
     input.setAttribute('name', i);
+    input.setAttribute('placeholder','Podaj krok przygotowania')
     input.type = "text";
    // input.appendChild(document.createTextNode(i+'. '+candidate.value));
     ul.appendChild(input);

@@ -3,6 +3,12 @@
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
     <link rel="stylesheet" type= "text/css" href="public/css/home.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/przekierowanie.js" defer></script>
+    <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
     <title>HOMEE</title>
 </head>
 
@@ -29,6 +35,9 @@
                 </li>
             </u1>
         </nav>
+
+
+
         <main class="main">
             <header>
                 <div class="hamburger1">
@@ -47,18 +56,22 @@
 
 
 
-            <section class="home">
+            <form class="home" action="recipe" method="POST" ENCTYPE="multipart/form-data">
                 <?php foreach($home as $recipe): ?>
-                    <div id = "project1">
-                        <img src="public/uploads/<?= $recipe->getImage(); ?>">
-                        <div>
-                            <div class="social">
-                                <i id= "cal" class="fas fa-fire"> <?= $recipe->getKcal(); ?> kcal</i>
+
+                    <div class="project2" id = "<?= $recipe->getId(); ?>">
+                        <button class= "baton" name="activeRecipe" value="<?= $recipe->getId(); ?>" >
+                            <img class="img" src="public/uploads/<?= $recipe->getImage(); ?>">
+                            <div class="przep">
+                                <div class="social">
+                                    <i id= "cal" class="fas fa-fire"> <?= $recipe->getKcal(); ?> kcal</i>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </div>
+
                 <?php endforeach; ?>
-            </section>
+            </form>
             
         </main>
     </div>

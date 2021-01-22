@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="./public/js/slider2.js" defer></script>
-
+    <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
 
 
 

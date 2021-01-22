@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type= "text/css" href="public/css/style.css">
     <link rel="stylesheet" type= "text/css" href="public/css/recipe.css">
+    <link rel="stylesheet" type= "text/css" href="public/css/style.css">
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="./public/js/script3.js" defer></script>
+    <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
+    <script type="text/javascript" src="./public/js/like.js" defer></script>
+
     <title>Recipe</title>
 </head>
 
@@ -48,10 +52,67 @@
 
         </header>
 
+        <section class="recipe" id="<?= $recipe->getId();?>">
 
-        <section class="recipe">
+            <div class="photo">
+                <div class="napis">
+                    <h><?= $recipe->getTitle();?></h>
+                </div>
+                <br>
+                <img class="obrazek" src="public/uploads/<?= $recipe->getImage(); ?>">
+                <div>
+                    <i id= "cal" class="fas fa-heart"> <?= $recipe->getLike(); ?>LIKE</i>
+                </div>
+            </div>
 
+            <div class="description">
+                <div class="napis">
+                    <h>Przepis</h>
+                </div>
+                <h><br><?= $recipe->getDescription();?></h>
+            </div>
 
+            <div class="makro">
+                <div class="kcal">
+                    <h>Kalorie: <?= $recipe->getKcal();?> kcal</h>
+                </div>
+                <div class="protein">
+                    <h>Białko: <?= $recipe->getProtein();?> g</h>
+                </div>
+                <div class="fat">
+                    <h>Tłuszcz: <?= $recipe->getFat();?> g</h>
+                </div>
+                <div class="carbs">
+                    <h>Węglowodany: <?= $recipe->getCarbs();?> g</h>
+                </div>
+            </div>
+
+            <div class="steps">
+                <div class="napis">
+                    <h>Kroki</h>
+                </div>
+
+                <div class="step">
+                    <?php
+                        $array  = $recipe->getSteps();;
+                        $steps = explode("*", $array);
+                    ?>
+
+                    <?php foreach($steps as $step): ?>
+                        <ul>
+                            <li><?= $step;?></li>
+                        </ul>
+                    <?php endforeach; ?>
+                </div>
+
+            </div>
+
+            <div class="products">
+                <div class="napis">
+                    <h>Produkty użyte w przepisie:</h>
+                </div>
+                <h><br><?= $recipe->getProducts();?></h>
+            </div>
         </section>
 
     </main>

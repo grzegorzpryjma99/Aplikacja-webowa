@@ -21,6 +21,7 @@ s
     color: #43A3B4;
     margin: 1em;
     line-height: 2.5em;
+    outline: 0;
 }
 
 label{

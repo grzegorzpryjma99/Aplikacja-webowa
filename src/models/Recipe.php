@@ -14,6 +14,7 @@ class Recipe
     private $image;
     private $categories;
     private $like;
+    private $id;
 
     public function getLike(): int
     {
@@ -143,7 +144,17 @@ class Recipe
         $this->steps = $steps;
     }
 
-    public function __construct($title, $description, $image, $protein, $fat, $carbs, $products, $steps,$kcal,$categories)
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    public function __construct($title, $description, $image, $protein, $fat, $carbs, $products, $steps,$kcal,$categories, $like = 0, $id = null)
     {
         $this->title = $title;
         $this->description = $description;
@@ -155,5 +166,7 @@ class Recipe
         $this->steps = $steps;
         $this->kcal = $kcal;
         $this->categories = $categories;
+        $this->like = $like;
+        $this->id = $id;
     }
 }
