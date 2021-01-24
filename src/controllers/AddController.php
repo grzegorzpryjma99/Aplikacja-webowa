@@ -31,7 +31,7 @@ class AddController extends AppController{
     public function add(){
 
         if($_SESSION['user'] == NULL){
-            $this->render('login');
+            return $this->render('login');
         }
 
         //cala logika przesylania wiadomosci
@@ -42,15 +42,15 @@ class AddController extends AppController{
             );
 
             $tab[] = 0;
+
+
+
             for( $x = 1; $x <= (int)($_POST['ilosckrokow']);  $x++ ){
                 $tmp = (string)$x;
                 $tab[$x-1] = $_POST[$tmp];
                 //w tej tablicy mam teraz po kolei kroki
             }
 
-            var_dump($tab);
-
-            var_dump(implode("*",$tab));
 
 
             $recipe = new Recipe($_POST['name'], $_POST['description'],$_FILES['photo']['name'],$_POST['protein'],$_POST['fat'],$_POST['carbs'],$_POST['products'],implode("*",$tab),$_POST['kcal'],$_POST['categories']);
@@ -70,7 +70,7 @@ class AddController extends AppController{
             return false;
         }
 
-        if(!isset(photo['type']) && !in_array($photo['type'],self::SUPPORTED_TYPES)){
+        if(!isset($photo['type']) && !in_array($photo['type'],self::SUPPORTED_TYPES)){
             $this->messages[] = "File type is not supported";
             return false;
         }
@@ -86,6 +86,9 @@ class AddController extends AppController{
     }
 
     public function like(int $id){
+
+        //$this->recipeRepository->checkLike($id,$_SESSION['user']);
+        //TODO funkcja like dodaje like w bazie, przed nią musze na to pozwolic lub nie
         $this->recipeRepository->like($id);
         http_response_code(200);
     }

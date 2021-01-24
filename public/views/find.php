@@ -138,10 +138,12 @@
 
 
                 <div class="category">
-                    <select name="wybor[]" multiple>
+                    <h>Kategoria</h><br>
+                    <select class="sel" name="wybor[]">
                         <?php foreach($find[0] as $recipe): ?>
                             <option value="<?= $recipe['categories']?>"><?= $recipe['categories']?> </option>
                         <?php endforeach; ?>
+
                     </select>
                 </div>
 

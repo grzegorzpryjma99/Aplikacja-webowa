@@ -11,6 +11,19 @@ class User
     private $town;
     private $country;
     private $description;
+    private $image;
+
+    public function getImage(): string
+    {
+        return $this->image;
+    }
+
+
+    public function setImage(string $image)
+    {
+        $this->image = $image;
+    }
+
 /*
     public function getId(): string
     {
@@ -96,7 +109,7 @@ class User
         $this->surname = $surname;
     }
 
-    public function __construct(string $email, string $password, string $name, string $surname, string $town, string $country, string $description)
+    public function __construct(string $email, string $password, string $name, string $surname, string $town, string $country, string $description, $image = 'profile.png')
     {
         $this->email = $email;
         $this->password = $password;
@@ -105,5 +118,6 @@ class User
         $this->town = $town;
         $this->country = $country;
         $this->description  = $description;
+        $this->image = $image;
     }
 }

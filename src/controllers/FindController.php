@@ -31,6 +31,8 @@ class FindController extends AppController{
        $proteinend = $_POST['proteinend'];
         $category = $_POST['wybor'];
 
+        var_dump($_POST['wybor']);
+
 
         //$user = $userRepository->getUser($email);
         $recipe = $recipeRepository->getTheRecipes($kcalstart,$kcalend,$carbsstart,$carbsend,$fatstart,$fatend,$proteinstart,$proteinend, $category);

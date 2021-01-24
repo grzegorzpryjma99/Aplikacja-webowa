@@ -52,3 +52,11 @@ function removeItem(){
     var item = document.getElementById(candidate.value);
     ul.removeChild(item);
 }
+
+
+//Zliczanie ilosci inputów
+function calculate(){
+    var x = document.getElementById("dynamic-list").childElementCount;
+    console.log(x);
+    document.getElementById('ilosckrokow').value = x;
+}

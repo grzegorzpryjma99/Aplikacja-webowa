@@ -6,6 +6,11 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController {
 
+    const MAX_FILE_SIZE = 1024*1024;
+    const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
+    const UPLOAD_DIRETORY = '/../public/uploads/';
+    private $messages = [];
+
     private $userRepository;
 
     public function __construct()
@@ -63,28 +68,39 @@ class SecurityController extends AppController {
             return $this->render('register');
         }
 
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $confirmedPassword = $_POST['confirmedPassword'];
-        $name = $_POST['name'];
-        $surname = $_POST['surname'];
-        $town = $_POST['town'];
-        $country = $_POST['country'];
-        $description = $_POST['description'];
+        if($this->isPost()){
 
-        if ($password !== $confirmedPassword) {
-            return $this->render('register', ['messages' => ['Please provide proper password']]);
+        if(is_uploaded_file($_FILES['photo']['tmp_name']) && $this->validate($_FILES['photo'])){
+        move_uploaded_file(
+            $_FILES['photo']['tmp_name'],
+            dirname(__DIR__).self::UPLOAD_DIRETORY.$_FILES['photo']['name']
+        );
+
+            if ($_POST['password'] !== $_POST['confirmedPassword']) {
+                return $this->render('register', ['messages' => ['Please provide proper password']]);
+            }
+
+            $user = new User($_POST['email'], md5($_POST['password']), $_POST['name'], $_POST['surname'],$_POST['town'],$_POST['country'],$_POST['description'],$_FILES['photo']['name']);
+
+
+            $this->userRepository->addUser($user);
+
+
+            return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
+
+        }else{
+            var_dump('nie ma zdj');
+            $user = new User($_POST['email'], md5($_POST['password']), $_POST['name'], $_POST['surname'],$_POST['town'],$_POST['country'],$_POST['description']);
+            $this->userRepository->addUser($user);
+            return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
         }
 
-        //TODO try to use better hash function
-        $user = new User($email, md5($password), $name, $surname,$town,$country,$description);
 
 
-        $this->userRepository->addUser($user);
+        }
 
+        }
 
-        return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
-    }
 
     public function logout(){
 
@@ -107,6 +123,21 @@ class SecurityController extends AppController {
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/login");
 */
+    }
+
+    private function validate(array $photo):bool
+    {
+        if($photo['size'] > self::MAX_FILE_SIZE){
+            $this->messages[] = "File is too large";
+            return false;
+        }
+
+        if(!isset($photo['type']) && !in_array($photo['type'],self::SUPPORTED_TYPES)){
+            $this->messages[] = "File type is not supported";
+            return false;
+        }
+
+        return true;
     }
 
 }

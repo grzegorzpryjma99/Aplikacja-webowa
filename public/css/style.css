@@ -38,7 +38,12 @@ form.login, form.register{
 }
 
 form.register {
-    height: 70vh;
+    height: 90vh;
+}
+
+.register.input[name=photo] {
+    border: 2px solid white;
+    border-radius: 15px;
 }
 
 button{
@@ -209,22 +214,28 @@ header{
     display: none;
 }
 
-/*TODO poprawić działanie hamburgera*/
-
-.hamburger{
-    display: none;
-    width: 12vw;
-    height: 7vh;
-    margin: 1px;
-}
-
 .phone{
     display: none;
 }
 
+
+
 .hamburger1{
     display: none;
 }
+
+
+.no-valid{
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+a>img{
+    margin: 10px;
+}
+
 
 @media only screen and (max-device-width: 420px)
 {
@@ -287,47 +298,12 @@ header{
 
     /*Boczne*/
 
-
-
     .hamburger{
         display: block;
-        width: 40px;
-        height: 35px;
-        border: 0;
-        border-top: 5px solid #ffffff;
-        background: transparent;
-        position: relative;
-        transition: 0.3s transform linear;
+        width: 95px;
+        height: 80px;
+        margin: -55px;
     }
-
-    .hamburger::before, .hamburger::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-top: 5px solid #ffffff;
-        transform: translateY(10px);
-      }
-
-      .hamburger::after {
-        transform: translateY(25px);
-        transition: 0.3s transform linear;
-      }
-
-      .hamburger:focus {
-        transform: rotate(45deg) translateY(5px);
-        border: none;
-      }
-
-      .hamburger:focus::after {
-        transform: rotate(-90deg) translateX(-10px);
-      }
-
-    .hamburger1{
-        display: block;
-    }
-
 
     .phone{
         display: flex;
@@ -352,61 +328,12 @@ header{
     ----------------------*/
 
     .hamburger1 {
-        padding-top: 20px;
-        padding-left: 15px;
-        width: 100%;
-        height: 43px;
+        display: block;
+        width: auto;
+        height: auto;
         cursor: pointer;
         z-index: 9998;
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    }
-
-    .bar,
-    .bar:after,
-    .bar:before {
-        width: 30px;
-        height: 3px;
-    }
-
-    .bar {
-        position: relative;
-        transform: translateY(10px);
-        background: black;
-        transition: all 0ms 300ms;
-    }
-
-    .bar.animate {
-        background: rgba(255, 255, 255, 0);
-    }
-
-    .bar:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 10px;
-        background: black;
-        transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .bar:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 10px;
-        background: black;
-        transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .bar.animate:after {
-        top: 0;
-        transform: rotate(45deg);
-        transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .bar.animate:before {
-        bottom: 0;
-        transform: rotate(-45deg);
-        transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     .site-nav ul {
@@ -418,7 +345,6 @@ header{
     /*---------------------
     Mobiles Menu - Slide IN
     ----------------------*/
-
     .site-nav {
         top: 0;
         max-width: 70%;
@@ -447,16 +373,35 @@ header{
         transition: all 500ms ease-in-out;
     }
 
+    .hamburger {
+        color: white;
+        background-color: transparent;
+        border: none;
+        float: right;
+        font-size: 2rem;
+        min-height: 4rem;
+        min-width: 4rem;
+        outline: none;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+    }
+
+    .hamburger:before {
+        content: "\2630";
+    }
+
+
+
+
+
+    /* ANIMATIONS AND TRANSITIONS */
+
+
+
+
+
+
 
 }
 
-.no-valid{
-    border: 3px solid red;
-    border-radius: 1em;
-    box-shadow: 0 0 0.2em red;
-    outline: none;
-}
-
-a>img{
-    margin: 10px;
-}

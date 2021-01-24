@@ -13,7 +13,8 @@
         <a href="home"><img src="public/img/logo.svg"></a>
     </div>
     <div class="login-container">
-        <form class="register" action="register" method="POST">
+        <form class="register" action="register" method="POST" ENCTYPE="multipart/form-data">
+
             <div class="messages">
                 <?php
                         if(isset($messages)){
@@ -23,6 +24,8 @@
                         }
                     ?>
             </div>
+            <h>Wybierz zdjęcie profilowe, możesz to zrobić później</h>
+            <input type="file" name="photo"/>
             <input name="email" type="text" placeholder="email@email.com">
             <input name="password" type="password" placeholder="password">
             <input name="confirmedPassword" type="password" placeholder="confirm password">

@@ -203,6 +203,11 @@ class RecipeRepository extends Repository
         $stmt->execute();
     }
 
+
+    public function checkLike(int $id, int $id_user){
+
+    }
+
     public function getCategories(): array
     {
         $stmt = $this->database->connect()->prepare('

@@ -79,11 +79,8 @@
     }
 
     .left {
-        border: none;
-        box-shadow: none;
-        border-radius: unset;
         text-align: center;
-        width: auto;
+        width: 90%;
         padding: 1em;
         margin: auto;
         height: auto;
@@ -105,4 +102,3 @@
 
 }
 
-/*TODO wystylowac caly vidok recipe*/

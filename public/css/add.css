@@ -268,6 +268,10 @@ input#candidate{
     display: none;
 }
 
+input#ilosckrokow{
+    display: none;
+}
+
 .kroki>button{
     background-color: #43A3B4;
     color: white;
@@ -393,5 +397,8 @@ input#candidate{
         margin-left: auto;
         width: 85vw;
 
+    }
+    .kroki>button{
+        margin-left: 5.5em;
     }
 }

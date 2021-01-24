@@ -54,15 +54,16 @@ class UserRepository extends Repository
             $user['surname'],
             $user['town'],
             $user['country'],
-            $user['description']
+            $user['description'],
+            $user['photo']
         );
     }
 
     public function addUser(User $user)
     {
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO users_details (name, surname,town,country,description)
-            VALUES (?, ?,?,?,?)
+            INSERT INTO users_details (name, surname,town,country,description,photo)
+            VALUES (?, ?,?,?,?,?)
         ');
 
         $stmt->execute([
@@ -70,7 +71,8 @@ class UserRepository extends Repository
             $user->getSurname(),
             $user->getTown(),
             $user->getCountry(),
-            $user->getDescription()
+            $user->getDescription(),
+            $user->getImage()
         ]);
 
         $stmt = $this->database->connect()->prepare('
@@ -88,13 +90,14 @@ class UserRepository extends Repository
     public function getUserDetailsId(User $user): int
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.users_details WHERE name = :name AND surname = :surname AND town = :town AND country = :country AND description = :description
+            SELECT * FROM public.users_details WHERE name = :name AND surname = :surname AND town = :town AND country = :country AND description = :description AND photo = :photo
         ');
         $stmt->bindParam(':name', $user->getName(),PDO::PARAM_STR);
         $stmt->bindParam(':surname', $user->getSurname(), PDO::PARAM_STR);
         $stmt->bindParam(':town', $user->getTown(), PDO::PARAM_STR);
         $stmt->bindParam(':country', $user->getCountry(), PDO::PARAM_STR);
         $stmt->bindParam(':description', $user->getDescription(), PDO::PARAM_STR);
+        $stmt->bindParam(':photo', $user->getImage(), PDO::PARAM_STR);
         $stmt->execute();
 
         $data = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -130,7 +130,7 @@
 
                 <div class="kroki">
                     <input  placeholder="Przygotowanie: podaj kroki" type="text" id="candidate"/>
-                    <button type="button" onclick="addItem()">Dodaj krok</button>
+                    <button type="button" onclick="addItem();calculate()">Dodaj krok</button>
                     <!--<button type="button" onclick="removeItem()">Cofnij</button>-->
                     <ul id="dynamic-list"></ul>
                 </div>
@@ -153,8 +153,7 @@
                     </div>
 -->
 
-                <!--TODO zrobic odczyt ilosci inputów w dynamicznej liscie-->
-                <input name="ilosckrokow" value="4" id="candidate" />
+                <input name="ilosckrokow" id="ilosckrokow" />
 
                 <div></div>
                 <div class="dodaj">

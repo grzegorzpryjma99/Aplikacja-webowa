@@ -58,8 +58,8 @@
 
                 <div class=profiluzytkownika>
                     <div class="foto">
-                        <!--TODO Dodac zdjecie konkretnego uzytkownika-->
-                        <img class="zdjecie" src="public/img/uploads/unnamed.jpg">
+                        <img class="zdjecie" src="public/uploads/<?= $user->getImage(); ?>">
+
                         <div class="where" >
                             <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
                             <h class= "nazwauzytkownika"><br><?= $user->getCountry(); ?></h>
