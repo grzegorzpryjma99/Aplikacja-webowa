@@ -209,6 +209,8 @@ header{
     display: none;
 }
 
+/*TODO poprawić działanie hamburgera*/
+
 .hamburger{
     display: none;
     width: 12vw;

@@ -153,7 +153,7 @@
                     </div>
 -->
 
-
+                <!--TODO zrobic odczyt ilosci inputów w dynamicznej liscie-->
                 <input name="ilosckrokow" value="4" id="candidate" />
 
                 <div></div>

@@ -2,8 +2,10 @@ const likeButtons = document.querySelectorAll('.fa-heart');
 
 function giveLike(){
     const likes = this;
-    const container = likes.parentElement.parentElement.parentElement;
+    const container = likes.parentElement.parentElement.parentElement.parentElement;
+    console.log(container);
     const id = container.getAttribute("id");
+    console.log(id);
 
 
     fetch(`/like/${id}`)

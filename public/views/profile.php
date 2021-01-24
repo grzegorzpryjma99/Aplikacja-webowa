@@ -58,6 +58,7 @@
 
                 <div class=profiluzytkownika>
                     <div class="foto">
+                        <!--TODO Dodac zdjecie konkretnego uzytkownika-->
                         <img class="zdjecie" src="public/img/uploads/unnamed.jpg">
                         <div class="where" >
                             <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
@@ -98,8 +99,8 @@
                 <form class="przepisyuzytkownika" action="recipe" method="POST" ENCTYPE="multipart/form-data">
                     <?php foreach($recipes as $recipe): ?>
 
-                        <div class="project2" id = "project1">
-                            <button class= "baton" name="activeRecipe" value="<?= $recipe->getKcal(); ?>" >
+                        <div class="project2" id = "<?= $recipe->getId(); ?>">
+                            <button class= "baton" name="activeRecipe" value="<?= $recipe->getId(); ?>" >
                                 <img class="img" src="public/uploads/<?= $recipe->getImage(); ?>">
                                 <div class="przep">
                                     <div class="social">

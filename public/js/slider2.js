@@ -1,33 +1,12 @@
-$(".dropdown dt a").on('click', function() {
-    $(".dropdown dd ul").slideToggle('fast');
-});
 
-$(".dropdown dd ul li a").on('click', function() {
-    $(".dropdown dd ul").hide();
-});
 
-function getSelectedValue(id) {
-    return $("#" + id).find("dt a span.value").html();
-}
+//checkbox
 
-$(document).bind('click', function(e) {
-    var $clicked = $(e.target);
-    if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
-});
-
-$('.mutliSelect input[type="checkbox"]').on('click', function() {
-
-    var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
-        title = $(this).val() + ",";
-
-    if ($(this).is(':checked')) {
-        var html = '<span title="' + title + '">' + title + '</span>';
-        $('.multiselct').append(html);
-        $(".hida").hide();
-    } else {
-        $('span[title="' + title + '"]').remove();
-        var ret = $(".hida");
-        $('.dropdown dt a').append(ret);
-
-    }
+$(document).ready(function() {
+    $('select').each(function () {
+        var options = ['Please Select'];
+        $(this).select2({
+            data: options
+        });
+    });
 });

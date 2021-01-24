@@ -123,12 +123,19 @@ class RecipeRepository extends Repository
         return $result;
     }
 
-    public function getTheRecipes(int $kcalstart, int $kcalend, int $carbsstart, int $carbsend, int $fatstart, $fatend, $proteinstart, $proteinend): array
+    public function getTheRecipes(int $kcalstart, int $kcalend, int $carbsstart, int $carbsend, int $fatstart, $fatend, $proteinstart, $proteinend, $category): array
     {
         $result = [];
+        //var_dump($category[0]);
+
+        //$ciag = implode('\',\'',$category);
+        //var_dump($ciag);
+       // $ciag = '\''.$ciag.'\'';
+        //var_dump($ciag);
+
         $stmt = $this->database->connect()->prepare('
         SELECT * FROM recipes WHERE kcal > :kcalstart AND kcal < :kcalend AND carbs > :carbsstart AND carbs < :carbsend
-        AND fat > :fatstart AND fat < :fatend AND protein > :proteinstart AND protein < :proteinend
+        AND fat > :fatstart AND fat < :fatend AND protein > :proteinstart AND protein < :proteinend AND categories IN (:a,:b,:d,:e,:f);
         ');
         $stmt->bindParam(':kcalstart', $kcalstart, PDO::PARAM_INT);
         $stmt->bindParam(':kcalend', $kcalend, PDO::PARAM_INT);
@@ -139,8 +146,21 @@ class RecipeRepository extends Repository
         $stmt->bindParam(':proteinstart', $proteinstart, PDO::PARAM_INT);
         $stmt->bindParam(':proteinend', $proteinend, PDO::PARAM_INT);
 
+
+            $stmt->bindParam(':a', $category[0], PDO::PARAM_STR);
+            $stmt->bindParam(':b', $category[1], PDO::PARAM_STR);
+            $stmt->bindParam(':d', $category[2], PDO::PARAM_STR);
+            $stmt->bindParam(':e', $category[3], PDO::PARAM_STR);
+            $stmt->bindParam(':f', $category[4], PDO::PARAM_STR);
+
+
+
+
+
         $stmt->execute();
         $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 
         foreach ($recipes as $recipe) {
             $result[] = new Recipe(
@@ -167,10 +187,9 @@ class RecipeRepository extends Repository
         $stmt = $this->database->connect()->prepare('
         SELECT products FROM public.recipes
         ');
-        var_dump($stmt);
         $stmt->execute();
         $products = $stmt->fetch(PDO::FETCH_ASSOC);
-        var_dump($products);
+;
 
         return $products;
     }
@@ -183,4 +202,19 @@ class RecipeRepository extends Repository
         $stmt->bindParam(":id",$id,PDO::PARAM_INT);
         $stmt->execute();
     }
+
+    public function getCategories(): array
+    {
+        $stmt = $this->database->connect()->prepare('
+        SELECT DISTINCT categories FROM public.recipes;
+        ');
+        $stmt->execute();
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($products as $product) {
+            $result[] = $product;
+        }
+        return $products;
+    }
+
 }

@@ -16,6 +16,7 @@ class ProfileController extends AppController{
 
     public function profile(){
 
+        var_dump($_SESSION['user']);
         if($_SESSION['user'] == NULL){
             $this->render('login');
         }

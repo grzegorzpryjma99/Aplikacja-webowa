@@ -53,25 +53,18 @@
         </header>
 
         <section class="recipe" id="<?= $recipe->getId();?>">
+        <div class="left">
+                    <div class="photo">
+                        <div class="napis">
+                            <h><?= $recipe->getTitle();?></h>
+                        </div>
 
-            <div class="photo">
-                <div class="napis">
-                    <h><?= $recipe->getTitle();?></h>
-                </div>
-                <br>
-                <img class="obrazek" src="public/uploads/<?= $recipe->getImage(); ?>">
-                <div>
-                    <i id= "cal" class="fas fa-heart"> <?= $recipe->getLike(); ?>LIKE</i>
-                </div>
-            </div>
-
-            <div class="description">
-                <div class="napis">
-                    <h>Przepis</h>
-                </div>
-                <h><br><?= $recipe->getDescription();?></h>
-            </div>
-
+                        <img class="obrazek" src="public/uploads/<?= $recipe->getImage(); ?>">
+                        <div class="heart">
+                            <i id= "cal" class="fas fa-heart"><?= $recipe->getLike(); ?></i>
+                        </div>
+                    </div>
+<!--TODO jeden user moze dawac jeden like-->
             <div class="makro">
                 <div class="kcal">
                     <h>Kalorie: <?= $recipe->getKcal();?> kcal</h>
@@ -87,32 +80,47 @@
                 </div>
             </div>
 
-            <div class="steps">
-                <div class="napis">
-                    <h>Kroki</h>
-                </div>
-
-                <div class="step">
-                    <?php
-                        $array  = $recipe->getSteps();;
-                        $steps = explode("*", $array);
-                    ?>
-
-                    <?php foreach($steps as $step): ?>
-                        <ul>
-                            <li><?= $step;?></li>
-                        </ul>
-                    <?php endforeach; ?>
-                </div>
-
-            </div>
-
             <div class="products">
                 <div class="napis">
                     <h>Produkty użyte w przepisie:</h>
                 </div>
                 <h><br><?= $recipe->getProducts();?></h>
             </div>
+        </div>
+            <div class="right">
+                <div class="description">
+                    <div class="napis">
+                        <h>Przepis</h>
+                    </div>
+                    <h><br><?= $recipe->getDescription();?></h>
+                </div>
+
+
+
+                <div class="steps">
+                    <div class="napis">
+                        <h>Kroki</h>
+                    </div>
+
+                    <div class="step">
+                        <?php
+                        $array  = $recipe->getSteps();;
+                        $steps = explode("*", $array);
+                        ?>
+
+                        <?php foreach($steps as $step): ?>
+                            <ul>
+                                <li><?= $step;?></li>
+                            </ul>
+                        <?php endforeach; ?>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
         </section>
 
     </main>
