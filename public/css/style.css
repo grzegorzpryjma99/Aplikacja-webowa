@@ -1,0 +1,407 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #F8F9F8 0%, #E2E4D8 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logologin{
+    width: 50%;
+    text-align: center;
+}
+
+.login-container{
+    width: 50%;
+}
+
+
+
+form.login, form.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 40vh;
+
+    background: #43A3B4 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 39px;
+
+}
+
+form.register {
+    height: 90vh;
+}
+
+.register.input[name=photo] {
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+button{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+
+    width: 50%;
+    border: none;
+    color: #43A3B4;
+    margin: 0.5em;
+    line-height: 2.5em;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+    outline: 0;
+}
+
+
+@media only screen and (max-device-width: 420px)
+{
+    .container{
+        flex-direction: column;
+    }
+
+    * {
+        font-size: 36px;
+    }
+
+    .login-container, .logo{
+        width: 100%;
+    }
+
+    form{
+        margin: auto;
+    }
+
+    img{
+        height: 12em;
+        margin: 2em;
+    }
+
+
+}
+
+.base-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+
+}
+
+nav{
+    width: 20vw;
+    height: 100%;
+    background: #43A3B4 0% 0% no-repeat padding-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+
+
+nav > img{
+    width: 60%;
+    margin: 2em auto;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+
+}
+
+.buttonregister{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+    width: 50%;
+    border: none;
+    color: #43A3B4;
+    margin: 0.5em;
+    line-height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+
+}
+
+li i{
+    font-size: 1.5em;
+    color: white;
+}
+
+.button {
+    border: 2px solid white;
+    border-radius: 2em;
+    margin-left: 1em;
+    text-align: center;
+    letter-spacing: 0.7px;
+    color: white;
+    padding: 0.2em;
+    width: 60%;
+}
+
+u1{
+    list-style-type: none;
+    color: white;
+    font: normal normal normal 20px/27px Segoe UI;
+    letter-spacing: 0.72px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: calc(100% - 40px);
+
+}
+
+
+li{
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.fa,
+.fas{
+    width: 1em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #E2E4D8 0% 0% no-repeat padding-box;
+    width: 80vw;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    height: 7em;
+}
+
+.tekst{
+    text-align: auto;
+    font: normal normal normal 40px/53px Segoe UI;
+    letter-spacing: 0px;
+    color: #43A3B4;
+}
+
+.logo{
+    text-align: center;
+}
+
+
+
+.cofnij{
+    display: none;
+}
+
+.phone{
+    display: none;
+}
+
+
+
+.hamburger1{
+    display: none;
+}
+
+
+.no-valid{
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+a>img{
+    margin: 10px;
+}
+
+
+@media only screen and (max-device-width: 420px)
+{
+
+     form.login{
+         border-radius: 90px;
+     }
+
+    header{
+        height: 3em;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    * {
+        font-size: 36px;
+    }
+
+    .login-container, .logo{
+        width: 100%;
+    }
+
+    form{
+        margin: auto;
+    }
+
+    img{
+        height: 12em;
+        margin: 2em;
+    }
+
+    /*dla telefonu zmieniam pasek gorny*/
+    .tekst{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+    /*
+    .phone{
+        display: grid;
+        text-align: right;
+        align-items: flex-end;
+    }
+    */
+
+    .main{
+        width: 100vw;
+    }
+
+
+
+    header{
+        display: flex;
+        background-color: #43A3B4;
+        padding: 2em 2em;
+    }
+
+    /*Boczne*/
+
+    .hamburger{
+        display: block;
+        width: 95px;
+        height: 80px;
+        margin: -55px;
+    }
+
+    .phone{
+        display: flex;
+    }
+
+    .phone> img{
+        margin: 0em;
+        height: 2em;
+    }
+
+    form.register{
+        height: 60vh;
+        overflow: auto;
+    }
+
+    .logologin{
+        width: 58%;
+    }
+
+    /*---------------------
+    HAMBURGER MENU
+    ----------------------*/
+
+    .hamburger1 {
+        display: block;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        z-index: 9998;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
+    .site-nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /*---------------------
+    Mobiles Menu - Slide IN
+    ----------------------*/
+    .site-nav {
+        top: 0;
+        max-width: 70%;
+        left: -100%;
+        width: 100%;
+        color: black;
+        height: 100%;
+        position: fixed;
+        z-index: 9997;
+        overflow-y: auto;
+        -webkit-transform: translate3d(0, 0, 205px);
+        -moz-transform: translate3d(0, 0, 205px);
+        transform: translate3d(0, 0, 205px);
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+    }
+
+    .site-nav.active {
+        left: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+    }
+
+    .hamburger {
+        color: white;
+        background-color: transparent;
+        border: none;
+        float: right;
+        font-size: 2rem;
+        min-height: 4rem;
+        min-width: 4rem;
+        outline: none;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+    }
+
+    .hamburger:before {
+        content: "\2630";
+    }
+
+
+
+
+
+    /* ANIMATIONS AND TRANSITIONS */
+
+
+
+
+
+
+
+}
+

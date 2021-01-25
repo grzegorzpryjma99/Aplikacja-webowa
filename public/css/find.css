@@ -1,0 +1,513 @@
+.find{
+    color: #43A3B4;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 4em;
+    padding: 2em;
+    overflow: hidden;
+    height: 80%;
+}
+section{
+    overflow: auto;
+    height: 90%;
+}
+
+.kcalicon{
+    padding: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.find>button{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+    width: 70%;
+    border: none;
+    color: #43A3B4;
+    margin: 1em;
+    line-height: 2.5em;
+    outline: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label{
+    font-weight: bold;
+}
+.steps>.button{
+    background-color: #43A3B4;
+    border: 1px solid #707070;
+    border-radius: 90px;
+    border: none;
+    height: 5vh;
+    width: 5vw;
+    color: white;
+    margin: 1em;
+}
+
+
+
+
+/*drugi slider*/
+body {
+    background-color: #f0f7ef;
+}
+
+.containerrr {
+    display: flex;
+    width: 500px;
+    height: 20%;
+    margin: auto;
+    text-alignt: center;
+}
+
+.sliderrr {
+    width: 100%;
+    height: 20%;
+    margin: 0% auto;
+}
+
+#start{
+    position: relative;
+    top: 19px;
+}
+
+#start2{
+    position: relative;
+    top: 19px;
+}
+#start3{
+    position: relative;
+    top: 19px;
+}
+#start4{
+    position: relative;
+    top: 19px;
+}
+
+/* track */
+input[type="range"] {
+    -webkit-appearance: none !important;
+    width: 100%;
+    height: 4px;
+    background-color: #84C1CB;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    transition: all 400ms;
+    outline:none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    transform:scale(0.75);
+    width: 30px;
+    height: 30px;
+    border: 5px solid #43A3B4;
+    background-color: white;
+    border-radius: 40px;
+    transition: all 400ms;
+    outline:none
+}
+
+/* thumb hover */
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform:scale(0.85);
+}
+input[type="range"]::-moz-range-thumb:hover{
+    transform:scale(0.85);
+}
+
+/* thumb active */
+input[type="range"]::-webkit-slider-thumb:active {
+    transform:scale(1);
+}
+input[type="range"]::-moz-range-thumb:active{
+    transform:scale(1);
+}
+
+
+#rangevalue {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+
+#rangevalue2 {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+
+#rangevalue3 {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+#rangevalue4 {
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    width: 100%;
+    color: #84C1CB;
+}
+
+/*Dropdown*/
+/* Got a weird error when I used partials of the css and not the full minified file. There may be a partial that fixes the issue but for now the full file will do the trick. */
+/*.center{
+    width:375px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
+}*/
+
+/*
+.dropdown-check-list {
+    display: inline-block;
+}
+
+.dropdown-check-list .anchor {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 50px 5px 10px;
+    border: 1px solid #ccc;
+}
+
+.dropdown-check-list .anchor:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.dropdown-check-list .anchor:active:after {
+    right: 8px;
+    top: 21%;
+}
+
+.dropdown-check-list ul.items {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.dropdown-check-list ul.items li {
+    list-style: none;
+}
+
+.dropdown-check-list.visible .anchor {
+    color: #0094ff;
+}
+
+.dropdown-check-list.visible .items {
+    display: block;
+    height: 100px;
+    width: auto;
+    overflow: auto;
+}
+
+.center{
+    width:200px;
+    margin:0px auto
+}
+
+select {
+    display: none !important;
+}
+
+.dropdown-select {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+    background-color: #fff;
+    border-radius: 6px;
+    border: solid 1px #eee;
+    box-shadow: 0px 2px 5px 0px rgba(155, 155, 155, 0.5);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+
+}
+
+.dropdown-select:focus {
+    background-color: #fff;
+}
+
+.dropdown-select:hover {
+    background-color: #fff;
+}
+
+.dropdown-select:active,
+.dropdown-select.open {
+    background-color: #fff !important;
+    border-color: #bbb;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+}
+
+.dropdown-select:after {
+    height: 0;
+    width: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #777;
+    -webkit-transform: origin(50% 20%);
+    transform: origin(50% 20%);
+    transition: all 0.125s ease-in-out;
+    content: '';
+    display: block;
+    margin-top: -2px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+
+.dropdown-select.open:after {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.dropdown-select.open .list {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-select.open .option {
+    cursor: pointer;
+}
+
+.dropdown-select.wide {
+    width: 100%;
+}
+
+.dropdown-select.wide .list {
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.dropdown-select .list {
+    box-sizing: border-box;
+    transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+    background-color: #fff;
+    border-radius: 6px;
+    margin-top: 4px;
+    padding: 3px 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    max-height: 250px;
+    overflow: auto;
+    border: 1px solid #ddd;
+}
+
+.dropdown-select .list:hover .option:not(:hover) {
+    background-color: transparent !important;
+}
+.dropdown-select .dd-search{
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0.5rem;
+}
+
+.dropdown-select .dd-searchbox{
+    width:90%;
+    padding:0.5rem;
+    border:1px solid #999;
+    border-color:#999;
+    border-radius:4px;
+    outline:none;
+}
+.dropdown-select .dd-searchbox:focus{
+    border-color:#12CBC4;
+}
+
+.dropdown-select .list ul {
+    padding: 0;
+}
+
+.dropdown-select .option {
+    cursor: default;
+    font-weight: 400;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    transition: all 0.2s;
+    list-style: none;
+}
+
+.dropdown-select .option:hover,
+.dropdown-select .option:focus {
+    background-color: #f6f6f6 !important;
+}
+
+.dropdown-select .option.selected {
+    font-weight: 600;
+    color: #12cbc4;
+}
+
+.dropdown-select .option.selected:focus {
+    background: #f6f6f6;
+}
+
+.dropdown-select a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropdown-select a:hover {
+    color: #666;
+}
+*/
+
+.sel{
+    width: 100%;
+    height: 90%;
+    border: 1px solid #43A3B4;
+    border-radius: 10px;
+    outline: 0;
+    margin-top: 1em
+}
+
+.category>h{
+    font-size:2em;
+    font-weight: bold;
+}
+
+@media only screen and (max-device-width: 420px)
+{
+    .find{
+
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        grid-gap: 1em;
+        height: 100%;
+    }
+
+    .find>button{
+        margin-right: auto;
+        margin-left: auto;
+        width: 80vw;
+        margin-top: 4em;
+    }
+
+    .containerrr{
+        width: 100%;
+
+    }
+
+    #start{
+        position: relative;
+        top: 41px;
+    }
+
+    #start2{
+        position: relative;
+        top: 41px;
+    }
+    #start3{
+        position: relative;
+        top: 41px;
+    }
+    #start4{
+        position: relative;
+        top: 41px;
+    }
+
+    .kcalicon{
+        padding: 0em;
+        text-align: left;
+    }
+
+    input[type="range"]{
+        height: 10px;
+    }
+
+    #rangevalue{
+        font-size: 1.5em;
+    }
+    #rangevalue2{
+        font-size: 1.5em;
+    }
+    #rangevalue3{
+        font-size: 1.5em;
+    }
+    #rangevalue4{
+        font-size: 1.5em;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        width: 60px;
+        height: 60px;
+        border: 8px solid #43A3B4;
+
+    }
+}

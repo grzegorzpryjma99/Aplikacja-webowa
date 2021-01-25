@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b8a2b59-3f78-476c-9e3c-1bfa417337ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/add.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/add.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/find.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/find.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/recipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/recipe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/script3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/script3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/sidemenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/sidemenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/find.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/find.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AddController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AddController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/FindController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/FindController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/RecipeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/RecipeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/UserRepository.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="checkpoint1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1lL0Lmf32iP6PKUIcvDxvbu8taz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\grzeg\OneDrive\Pulpit\wdpai2\public\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b8a2b59-3f78-476c-9e3c-1bfa417337ba" name="Default Changelist" comment="" />
+      <created>1607361012018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607361012018</updated>
+      <workItem from="1607361013492" duration="11258000" />
+      <workItem from="1607792501765" duration="1077000" />
+      <workItem from="1607794756379" duration="10294000" />
+      <workItem from="1610117914196" duration="1558000" />
+      <workItem from="1610306483768" duration="36254000" />
+      <workItem from="1610631889807" duration="172815000" />
+      <workItem from="1611414296174" duration="58155000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

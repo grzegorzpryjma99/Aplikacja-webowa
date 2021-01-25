@@ -1,0 +1,104 @@
+.recipe{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1em;
+    padding: 1em;
+    overflow: auto;
+    color: #43A3B4;
+}
+
+.napis{
+    font-size: 40px;
+}
+
+
+.photo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.description{
+    margin-left: auto;
+    margin-right: auto;
+    height: 20em;
+    overflow: auto;
+}
+
+
+.makro>div>h{
+    font-size: 30px;
+}
+
+.makro>div{
+    padding: 1em;
+}
+
+.steps{
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
+.products{
+    margin-left: auto;
+    margin-right: auto;
+}
+.step>ul>li{
+    text-align: left;
+}
+
+.products>h{
+    font-size: 25px;
+}
+
+.left{
+    border: 2px solid black;
+    box-shadow: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 70%;
+    padding: 1em;
+    margin: auto;
+    height: 95%;
+    overflow: auto;
+}
+
+.heart{
+    padding: 1em;
+}
+
+.heart>i{
+    font-size: 30px;
+    display: contents;
+}
+@media only screen and (max-device-width: 420px) {
+    .recipe{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        text-align: center;
+        width: 90%;
+        padding: 1em;
+        margin: auto;
+        height: auto;
+        overflow: unset;
+    }
+
+    .right{
+        display: grid;
+        grid-gap: 3em;
+    }
+
+    .description{
+        height: auto;
+    }
+
+    .napis{
+        padding: 1em;
+    }
+
+}
+
