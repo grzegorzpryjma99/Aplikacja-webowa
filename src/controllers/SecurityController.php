@@ -89,7 +89,6 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
 
         }else{
-            var_dump('nie ma zdj');
             $user = new User($_POST['email'], md5($_POST['password']), $_POST['name'], $_POST['surname'],$_POST['town'],$_POST['country'],$_POST['description']);
             $this->userRepository->addUser($user);
             return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);

@@ -8,11 +8,6 @@
     overflow: auto;
 }
 
-
-.add > * {
-
-  }
-
 .add>form>input{
     background-color: white;
     width: 32vw;
@@ -20,7 +15,6 @@
     border: 2px solid #BCE0FD;
     border-radius: 24px;
 }
-
 
 .input {
     background-color: transparent;
@@ -31,8 +25,7 @@
     width: -webkit-fill-available;
 }
 
-
-.name>input{
+.add>div>input, textarea{
     background-color: white;
     width: 32vw;
     height: 4vh;
@@ -43,17 +36,12 @@
 }
 
 .description>textarea{
-    background-color: white;
-    width: 32vw;
     height: 20vh;
     margin: 20px;
-    color: #43A3B4;
-    border: 2px solid #BCE0FD;
-    border-radius: 24px;
     outline: 0;
 }
 
-.protein>input{
+.macro>div>input{
     background-color: white;
     width: 32vw;
     height: 4vh;
@@ -62,57 +50,6 @@
     border: 2px solid #BCE0FD;
     border-radius: 24px;
 }
-
-.fat>input{
-    background-color: white;
-    width: 32vw;
-    height: 4vh;
-    color: #43A3B4;
-    margin: 20px;
-    border: 2px solid #BCE0FD;
-    border-radius: 24px;
-}
-
-.carbs>input{
-    background-color: white;
-    width: 32vw;
-    height: 4vh;
-    color: #43A3B4;
-    margin: 20px;
-    border: 2px solid #BCE0FD;
-    border-radius: 24px;
-}
-
-.products>input{
-    background-color: white;
-    width: 32vw;
-    height: 4vh;
-    margin: 20px;
-    color: #43A3B4;
-    border: 2px solid #BCE0FD;
-    border-radius: 24px;
-}
-
-
-.kcal>input{
-    background-color: white;
-    width: 32vw;
-    height: 4vh;
-    margin: 20px;
-    color: #43A3B4;
-    border: 2px solid #BCE0FD;
-    border-radius: 24px;
-}
-.categories>input{
-    background-color: white;
-    width: 32vw;
-    height: 4vh;
-    margin: 20px;
-    color: #43A3B4;
-    border: 2px solid #BCE0FD;
-    border-radius: 24px;
-}
-
 
 .dodaj{
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -128,7 +65,6 @@
     outline: 0;
 }
 
-
 #dynamic-list{
     list-style-type: none;
     text-align: start;
@@ -137,8 +73,6 @@
 #dynamic-list>li{
     text-align: start;
 }
-
-
 
 .napis{
 
@@ -149,10 +83,8 @@
     display: none;
 }
 
-
 .file-upload {
     padding: 20px;
-
     background-color: white;
     border-radius: 24px;
     margin: 20px;
@@ -169,7 +101,6 @@
     border: none;
     padding: 10px;
     border-radius: 4px;
-    transition: all .2s ease;
     outline: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -246,7 +177,6 @@
     border: none;
     padding: 10px;
     border-radius: 4px;
-    transition: all .2s ease;
     outline: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -264,11 +194,7 @@
     transition: all .2s ease;
 }
 
-input#candidate{
-    display: none;
-}
-
-input#ilosckrokow{
+input#candidate,#ilosckrokow{
     display: none;
 }
 
@@ -276,6 +202,13 @@ input#ilosckrokow{
     background-color: #43A3B4;
     color: white;
     outline: 0;
+}
+
+.kroki>button:hover {
+    background: #5cb7cb;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
 }
 
 .kroki>ul>input{
@@ -287,7 +220,6 @@ input#ilosckrokow{
     border: 2px solid #BCE0FD;
     border-radius: 24px;
 }
-
 
 @media only screen and (max-device-width: 420px){
     .add{
@@ -307,6 +239,12 @@ input#ilosckrokow{
         margin-right: auto;
     }
 
+    .dodaj, .kroki, .add>div>input, textarea{
+        margin-right: auto;
+        margin-left: auto;
+        width: 85vw;
+    }
+
     .photo>div{
         width: 88vw;
         margin-left: auto;
@@ -320,43 +258,15 @@ input#ilosckrokow{
         margin-right: auto;
     }
 
-    .products>input{
-        margin-right: auto;
-        margin-left: auto;
-        width: 85vw;
-
-    }
-
-    .dodaj{
-        margin-right: auto;
-        margin-left: auto;
-        width: 85vw;
-    }
-
     .steps{
         display: flex;
         flex-direction: row;
-    }
-
-    .circle{
-        margin: auto;
     }
 
     .steps1{
         margin-right: auto;
         margin-left: auto;
         width: 73vw;
-    }
-
-    .kroki{
-        margin-right: auto;
-        margin-left: auto;
-        width: 85vw;
-    }
-
-    .circle>button{
-        width: 12vw;
-        height: 7vh;
     }
 
     .macro{
@@ -373,31 +283,11 @@ input#ilosckrokow{
         display: block;
     }
 
-    .protein>input{
-        margin: 13px;
-        width: 21vw;
-    }
-    .fat>input{
-        margin: 13px;
-        width: 21vw;
-    }
-    .carbs>input{
+    .macro>div>input{
         margin: 13px;
         width: 21vw;
     }
 
-    .kcal>input{
-        margin-right: auto;
-        margin-left: auto;
-        width: 85vw;
-    }
-
-    .categories>input{
-        margin-right: auto;
-        margin-left: auto;
-        width: 85vw;
-
-    }
     .kroki>button{
         margin-left: 5.5em;
     }

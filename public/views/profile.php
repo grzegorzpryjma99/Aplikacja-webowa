@@ -3,13 +3,13 @@
 
     <link rel="stylesheet" type= "text/css" href="public/css/profile.css">
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
+
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
 
     <title>PROFILE</title>
 </head>
-
 <body>
     <div class="base-container">
         <nav class="site-nav" >
@@ -59,7 +59,6 @@
                 <div class=profiluzytkownika>
                     <div class="foto">
                         <img class="zdjecie" src="public/uploads/<?= $user->getImage(); ?>">
-
                         <div class="where" >
                             <h class= "nazwauzytkownika"><?= $user->getName(); ?></h>
                             <h class= "nazwauzytkownika"><br><?= $user->getCountry(); ?></h>
@@ -69,7 +68,6 @@
                         <article class="content">
                             <p> <?= $user->getDescription(); ?> </p>
                         </article>
-
 
                     <div class=przyciski>
                         <ul class="lista">
@@ -91,14 +89,10 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
-
-
 
                 <form class="przepisyuzytkownika" action="recipe" method="POST" ENCTYPE="multipart/form-data">
                     <?php foreach($recipes as $recipe): ?>
-
                         <div class="project2" id = "<?= $recipe->getId(); ?>">
                             <button class= "baton" name="activeRecipe" value="<?= $recipe->getId(); ?>" >
                                 <img class="img" src="public/uploads/<?= $recipe->getImage(); ?>">
@@ -109,12 +103,9 @@
                                 </div>
                             </button>
                         </div>
-
                     <?php endforeach; ?>
                 </form>
-
             </section>
         </main>
     </div>
-
 </body>

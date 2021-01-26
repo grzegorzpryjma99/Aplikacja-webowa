@@ -1,6 +1,7 @@
 const likeButtons = document.querySelectorAll('.fa-heart');
 
 function giveLike(){
+
     const likes = this;
     const container = likes.parentElement.parentElement.parentElement.parentElement;
     console.log(container);

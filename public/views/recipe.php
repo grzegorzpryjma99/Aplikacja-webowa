@@ -64,7 +64,6 @@
                             <i id= "cal" class="fas fa-heart"><?= $recipe->getLike(); ?></i>
                         </div>
                     </div>
-<!--TODO jeden user moze dawac jeden like-->
             <div class="makro">
                 <div class="kcal">
                     <h>Kalorie: <?= $recipe->getKcal();?> kcal</h>

@@ -1,3 +1,4 @@
+//upload plikow
 function readURL(input) {
     if (input.files && input.files[0]) {
 
@@ -45,14 +46,6 @@ function addItem(){
     ul.appendChild(input);
     i++;
 }
-
-function removeItem(){
-    var ul = document.getElementById("dynamic-list");
-    var candidate = document.getElementById("candidate");
-    var item = document.getElementById(candidate.value);
-    ul.removeChild(item);
-}
-
 
 //Zliczanie ilosci inputów
 function calculate(){
