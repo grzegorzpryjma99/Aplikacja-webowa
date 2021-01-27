@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <script type="text/javascript" src="./public/js/script.js" defer></script>
@@ -9,12 +8,11 @@
 <body>
 <div class="container">
     <div class="logologin">
-
         <a href="home"><img src="public/img/logo.svg"></a>
     </div>
+
     <div class="login-container">
         <form class="register" action="register" method="POST" ENCTYPE="multipart/form-data">
-
             <div class="messages">
                 <?php
                         if(isset($messages)){
@@ -34,11 +32,9 @@
             <input name="town" type="text" placeholder="town">
             <input name="country" type="text" placeholder="country">
             <input name="description" type="text" placeholder="description">
-
             <button type="submit">REGISTER</button>
-
-
         </form>
     </div>
+
 </div>
 </body>

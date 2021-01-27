@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type= "text/css" href="public/css/recipe.css">
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
+
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
 
@@ -41,7 +42,7 @@
                 <button class="hamburger"></button>
             </div>
             <div class="tekst">
-                TU BEDZIE JAKIS TEKST
+                Zainspiruj się...
             </div>
             <div class="logo">
                 <a href="home"><img src="public/img/logov3.svg"></a>
@@ -53,39 +54,41 @@
         </header>
 
         <section class="recipe" id="<?= $recipe->getId();?>">
-        <div class="left">
-                    <div class="photo">
-                        <div class="napis">
-                            <h><?= $recipe->getTitle();?></h>
-                        </div>
-
-                        <img class="obrazek" src="public/uploads/<?= $recipe->getImage(); ?>">
-                        <div class="heart">
-                            <i id= "cal" class="fas fa-heart"><?= $recipe->getLike(); ?></i>
-                        </div>
+            <div class="left">
+                <div class="photo">
+                    <div class="napis">
+                        <h><?= $recipe->getTitle();?></h>
                     </div>
-            <div class="makro">
-                <div class="kcal">
-                    <h>Kalorie: <?= $recipe->getKcal();?> kcal</h>
+
+                    <img class="obrazek" src="public/uploads/<?= $recipe->getImage(); ?>">
+                    <div class="heart">
+                        <i id= "cal" class="fas fa-heart"><?= $recipe->getLike(); ?></i>
+                    </div>
                 </div>
-                <div class="protein">
-                    <h>Białko: <?= $recipe->getProtein();?> g</h>
+
+                <div class="makro">
+                    <div class="kcal">
+                        <h>Kalorie: <?= $recipe->getKcal();?> kcal</h>
+                    </div>
+                    <div class="protein">
+                        <h>Białko: <?= $recipe->getProtein();?> g</h>
+                    </div>
+                    <div class="fat">
+                        <h>Tłuszcz: <?= $recipe->getFat();?> g</h>
+                    </div>
+                    <div class="carbs">
+                        <h>Węglowodany: <?= $recipe->getCarbs();?> g</h>
+                    </div>
                 </div>
-                <div class="fat">
-                    <h>Tłuszcz: <?= $recipe->getFat();?> g</h>
-                </div>
-                <div class="carbs">
-                    <h>Węglowodany: <?= $recipe->getCarbs();?> g</h>
+
+                <div class="products">
+                    <div class="napis">
+                        <h>Produkty użyte w przepisie:</h>
+                    </div>
+                    <h><br><?= $recipe->getProducts();?></h>
                 </div>
             </div>
 
-            <div class="products">
-                <div class="napis">
-                    <h>Produkty użyte w przepisie:</h>
-                </div>
-                <h><br><?= $recipe->getProducts();?></h>
-            </div>
-        </div>
             <div class="right">
                 <div class="description">
                     <div class="napis">
@@ -94,9 +97,8 @@
                     <h><br><?= $recipe->getDescription();?></h>
                 </div>
 
-
-
                 <div class="steps">
+
                     <div class="napis">
                         <h>Kroki</h>
                     </div>
@@ -113,15 +115,9 @@
                             </ul>
                         <?php endforeach; ?>
                     </div>
-
                 </div>
-
-
             </div>
-
-
         </section>
-
     </main>
 </div>
 </body>

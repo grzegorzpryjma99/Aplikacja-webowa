@@ -1,6 +1,7 @@
 body{
     margin: 0;
 }
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -11,7 +12,6 @@ body{
     align-items: center;
 }
 
-
 .logologin{
     width: 50%;
     text-align: center;
@@ -20,8 +20,6 @@ body{
 .login-container{
     width: 50%;
 }
-
-
 
 form.login, form.register{
     display: flex;
@@ -68,7 +66,6 @@ input{
     outline: 0;
 }
 
-
 @media only screen and (max-device-width: 420px)
 {
     .container{
@@ -91,8 +88,6 @@ input{
         height: 12em;
         margin: 2em;
     }
-
-
 }
 
 .base-container {
@@ -100,21 +95,16 @@ input{
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-
 }
 
 nav{
     width: 20vw;
     height: 100%;
     background: #43A3B4 0% 0% no-repeat padding-box;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
 }
-
-
 
 nav > img{
     width: 60%;
@@ -125,7 +115,6 @@ a{
     text-decoration: none;
     display: inline-block;
     line-height: 2em;
-
 }
 
 .buttonregister{
@@ -139,7 +128,6 @@ a{
     line-height: 2.5em;
     line-height: 2.5em;
     text-align: center;
-
 }
 
 li i{
@@ -167,7 +155,6 @@ u1{
     margin: 0 auto;
     padding: 0;
     width: calc(100% - 40px);
-
 }
 
 
@@ -187,7 +174,6 @@ main{
     height: 100vh;
     background: #E2E4D8 0% 0% no-repeat padding-box;
     width: 80vw;
-
 }
 
 header{
@@ -208,8 +194,6 @@ header{
     text-align: center;
 }
 
-
-
 .cofnij{
     display: none;
 }
@@ -218,12 +202,9 @@ header{
     display: none;
 }
 
-
-
 .hamburger1{
     display: none;
 }
-
 
 .no-valid{
     border: 3px solid red;
@@ -235,7 +216,6 @@ header{
 a>img{
     margin: 10px;
 }
-
 
 @media only screen and (max-device-width: 420px)
 {
@@ -276,19 +256,10 @@ a>img{
     .logo{
         display: none;
     }
-    /*
-    .phone{
-        display: grid;
-        text-align: right;
-        align-items: flex-end;
-    }
-    */
 
     .main{
         width: 100vw;
     }
-
-
 
     header{
         display: flex;
@@ -296,8 +267,7 @@ a>img{
         padding: 2em 2em;
     }
 
-    /*Boczne*/
-
+    /*Side Menu*/
     .hamburger{
         display: block;
         width: 95px;
@@ -323,9 +293,9 @@ a>img{
         width: 58%;
     }
 
-    /*---------------------
-    HAMBURGER MENU
-    ----------------------*/
+
+    /*HAMBURGER MENU*/
+
 
     .hamburger1 {
         display: block;
@@ -342,9 +312,7 @@ a>img{
     }
 
 
-    /*---------------------
-    Mobiles Menu - Slide IN
-    ----------------------*/
+    /*Mobiles Menu*/
     .site-nav {
         top: 0;
         max-width: 70%;
@@ -390,18 +358,5 @@ a>img{
     .hamburger:before {
         content: "\2630";
     }
-
-
-
-
-
-    /* ANIMATIONS AND TRANSITIONS */
-
-
-
-
-
-
-
 }
 

@@ -42,20 +42,14 @@ class AddController extends AppController{
 
             $tab[] = 0;
 
-
-
             for( $x = 1; $x <= (int)($_POST['ilosckrokow']);  $x++ ){
                 $tmp = (string)$x;
                 $tab[$x-1] = $_POST[$tmp];
                 //w tej tablicy mam teraz po kolei kroki
             }
 
-
-
             $recipe = new Recipe($_POST['name'], $_POST['description'],$_FILES['photo']['name'],$_POST['protein'],$_POST['fat'],$_POST['carbs'],$_POST['products'],implode("*",$tab),$_POST['kcal'],$_POST['categories']);
             $this->recipeRepository->addRecipe($recipe);
-
-
 
             return $this->render("home", [
                 'home'=> $this->recipeRepository->getRecipes(),

@@ -47,10 +47,10 @@ class RecipeRepository extends Repository
             VALUES (?,?)
         ');
 
-        $id_usera = null;
+        $id_usera = "*";
         $stmt->execute([
-            $recipe ->getId(),
-            $id_usera
+            $id_usera,
+            $recipe ->getId()
         ]);
 
         $cos = (int)$conn->lastInsertId();
@@ -62,7 +62,6 @@ class RecipeRepository extends Repository
 
         //TODO narazie pobralem to jak pobralem, zmienic inicjowanie sesji jakos
         $id_user = $_SESSION['user'];
-        var_dump($cos);
         $stmt->execute([
           $recipe->getTitle(),
           $recipe->getDescription(),
@@ -250,18 +249,14 @@ class RecipeRepository extends Repository
         $stmt->bindParam(":id",$id,PDO::PARAM_INT);
         $stmt->execute();
         $tmp = $stmt->fetch(PDO::FETCH_ASSOC);
-var_dump('idusera:',$_SESSION['user']);
-        var_dump($tmp['id_usera']);
         $usrs = explode("*", $tmp['id_usera']);
-        var_dump($usrs);
-        var_dump($id_user);
+
         if(in_array($id_user, $usrs)){
-            var_dump('jest w tablicyyy');
+            var_dump('jest w tablicy');
             return false;
         }else{
             return true;
         }
-
     }
 
     public function getCategories(): array

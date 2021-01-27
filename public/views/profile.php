@@ -5,6 +5,7 @@
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
 
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
+
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
 
@@ -105,6 +106,7 @@
                         </div>
                     <?php endforeach; ?>
                 </form>
+
             </section>
         </main>
     </div>

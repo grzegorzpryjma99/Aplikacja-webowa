@@ -1,9 +1,7 @@
 <?php
 
-
 class User
 {
-
     private $email;
     private $password;
     private $name;
@@ -18,23 +16,11 @@ class User
         return $this->image;
     }
 
-
     public function setImage(string $image)
     {
         $this->image = $image;
     }
 
-/*
-    public function getId(): string
-    {
-        return $this->id;
-    }
-
-    public function setId(string $id)
-    {
-        $this->id = $id;
-    }
-*/
     public function getTown(): string
     {
         return $this->town;
@@ -45,24 +31,20 @@ class User
         $this->town = $town;
     }
 
-
     public function getCountry(): string
     {
         return $this->country;
     }
-
 
     public function setCountry(string $country)
     {
         $this->country = $country;
     }
 
-
     public function getDescription(): string
     {
         return $this->description;
     }
-
 
     public function setDescription(string $description)
     {

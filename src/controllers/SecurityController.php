@@ -19,7 +19,6 @@ class SecurityController extends AppController {
         $this->userRepository = new UserRepository();
     }
 
-
     public function login()
     {
         $userRepository = new UserRepository();
@@ -57,9 +56,7 @@ class SecurityController extends AppController {
             header("Location: {$url}/login");
         }
 
-
         header("Location: {$url}/home");
-
     }
 
     public function register()
@@ -94,10 +91,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
         }
 
-
-
         }
-
         }
 
 

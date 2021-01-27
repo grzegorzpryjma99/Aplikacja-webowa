@@ -1,6 +1,5 @@
 <?php
 
-
 class Recipe
 {
     private $title;
@@ -21,7 +20,6 @@ class Recipe
         return $this->like;
     }
 
-
     public function setLike(int $like)
     {
         $this->like = $like;
@@ -32,96 +30,80 @@ class Recipe
         return $this->kcal;
     }
 
-
     public function setKcal(int $kcal)
     {
         $this->kcal = $kcal;
     }
-
 
     public function getCategories(): string
     {
         return $this->categories;
     }
 
-
     public function setCategories(string $categories)
     {
         $this->categories = $categories;
     }
-
 
     public function getTitle(): string
     {
         return $this->title;
     }
 
-
     public function setTitle(string $title)
     {
         $this->title = $title;
     }
-
 
     public function getDescription(): string
     {
         return $this->description;
     }
 
-
     public function setDescription(string $description)
     {
         $this->description = $description;
     }
-
 
     public function getImage():string
     {
         return $this->image;
     }
 
-
     public function setImage(string $image)
     {
         $this->image = $image;
     }
-
 
     public function getProtein(): string
     {
         return $this->protein;
     }
 
-
     public function setProtein(string $protein)
     {
         $this->protein = $protein;
     }
-
 
     public function getFat(): string
     {
         return $this->fat;
     }
 
-
     public function setFat(string $fat)
     {
         $this->fat = $fat;
     }
-
 
     public function getCarbs(): string
     {
         return $this->carbs;
     }
 
-
     public function setCarbs(string $carbs)
     {
         $this->carbs = $carbs;
     }
-
 
     public function getProducts():string
     {
@@ -137,7 +119,6 @@ class Recipe
     {
         return $this->steps;
     }
-
 
     public function setSteps(string $steps)
     {

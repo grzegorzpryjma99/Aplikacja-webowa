@@ -22,7 +22,7 @@ class AppController{
 
     protected function render(string $template = null, array $variables = []){
         $templatePath = 'public/views/'. $template.'.php'; //zmienilem z php
-        $output = 'File not founddddd';
+        $output = 'File not foundddd';
 
         if(file_exists($templatePath)){
             extract($variables);
