@@ -1,3 +1,4 @@
+//upload plikow
 function readURL(input) {
     if (input.files && input.files[0]) {
 
@@ -34,7 +35,6 @@ $('.image-upload-wrap').bind('dragleave', function () {
 //skrypt do dodawania listy krokow
 let i=1;
 function addItem(){
-
     var ul = document.getElementById("dynamic-list");
     var candidate = document.getElementById("candidate");
     var input = document.createElement("input");
@@ -45,15 +45,6 @@ function addItem(){
     ul.appendChild(input);
     i++;
 }
-
-function removeItem(){
-    var ul = document.getElementById("dynamic-list");
-    var candidate = document.getElementById("candidate");
-    var item = document.getElementById(candidate.value);
-    ul.removeChild(item);
-}
-
-
 //Zliczanie ilosci inputów
 function calculate(){
     var x = document.getElementById("dynamic-list").childElementCount;

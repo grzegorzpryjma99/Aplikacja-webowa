@@ -37,17 +37,31 @@ class RecipeRepository extends Repository
     }
 
 
+
     public function addRecipe(Recipe $recipe)
     {
-        //$data = new DataTime();
-        $stmt = $this->database->connect()->prepare('
-        INSERT INTO public.recipes (title,description,id_user,photo,protein,fat,carbs,products,steps,kcal,categories)
-        VALUES (?,?,?,?,?,?,?,?,?,?,?)
+
+        $conn= $this->database->connect();
+        $stmt = $conn->prepare('
+            INSERT INTO likes (id_usera, id_recipe)
+            VALUES (?,?)
+        ');
+
+        $id_usera = "*";
+        $stmt->execute([
+            $id_usera,
+            $recipe ->getId()
+        ]);
+
+        $cos = (int)$conn->lastInsertId();
+
+        $stmt = $conn->prepare('
+        INSERT INTO public.recipes (title,description,id_user,photo,protein,fat,carbs,products,steps,kcal,categories,id_like)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
         ');
 
         //TODO narazie pobralem to jak pobralem, zmienic inicjowanie sesji jakos
         $id_user = $_SESSION['user'];
-
         $stmt->execute([
           $recipe->getTitle(),
           $recipe->getDescription(),
@@ -59,10 +73,9 @@ class RecipeRepository extends Repository
           $recipe->getProducts(),
           $recipe->getSteps(),
           $recipe->getKcal(),
-          $recipe->getCategories()
+          $recipe->getCategories(),
+          $cos
         ]);
-
-
     }
 
     public function getRecipes(): array
@@ -194,18 +207,56 @@ class RecipeRepository extends Repository
         return $products;
     }
 
-    public function like(int $id){
+    public function like(int $id, int $who){
         $stmt = $this->database->connect()->prepare('
         UPDATE recipes SET "like" = "like" + 1 WHERE id = :id
         ');
-
         $stmt->bindParam(":id",$id,PDO::PARAM_INT);
         $stmt->execute();
     }
 
+    public function getLikesId(int $id){
+        $stmt = $this->database->connect()->prepare('
+        SELECT ud.id FROM recipes u LEFT JOIN likes ud
+                                         ON u.id_like = ud.id WHERE u.id = :id;
+        ');
+
+        $stmt->bindParam(":id",$id,PDO::PARAM_INT);
+        $stmt->execute();
+        $tmp = $stmt->fetch(PDO::FETCH_ASSOC);
+        var_dump($tmp['id']);
+        return $tmp['id'];
+    }
+
+
+    public function updateLikeTable(string $who, int $id){
+        $a = (string)$who;
+        $stmt = $this->database->connect()->prepare('
+        UPDATE likes SET id_usera = id_usera||\'*\'||:a WHERE id = :id
+        ');
+        $stmt->bindParam(":id",$id,PDO::PARAM_INT);
+        $stmt->bindParam(":a",$a,PDO::PARAM_STR);
+        $stmt->execute();
+    }
 
     public function checkLike(int $id, int $id_user){
+//wypisac tabele dla id przepisu gdzie sa lajki i wypisac tych userów
+        $stmt = $this->database->connect()->prepare('
+        SELECT id_usera FROM recipes u LEFT JOIN likes ud
+                                ON u.id_like = ud.id WHERE u.id = :id;
+        ');
 
+        $stmt->bindParam(":id",$id,PDO::PARAM_INT);
+        $stmt->execute();
+        $tmp = $stmt->fetch(PDO::FETCH_ASSOC);
+        $usrs = explode("*", $tmp['id_usera']);
+
+        if(in_array($id_user, $usrs)){
+            var_dump('jest w tablicy');
+            return false;
+        }else{
+            return true;
+        }
     }
 
     public function getCategories(): array

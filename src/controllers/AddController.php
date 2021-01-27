@@ -22,7 +22,6 @@ class AddController extends AppController{
 
     public function home(){
 
-
         $recipes = $this->recipeRepository->getRecipes();
         $this->render('home',['home'=> $recipes]);
 
@@ -43,15 +42,11 @@ class AddController extends AppController{
 
             $tab[] = 0;
 
-
-
             for( $x = 1; $x <= (int)($_POST['ilosckrokow']);  $x++ ){
                 $tmp = (string)$x;
                 $tab[$x-1] = $_POST[$tmp];
                 //w tej tablicy mam teraz po kolei kroki
             }
-
-
 
             $recipe = new Recipe($_POST['name'], $_POST['description'],$_FILES['photo']['name'],$_POST['protein'],$_POST['fat'],$_POST['carbs'],$_POST['products'],implode("*",$tab),$_POST['kcal'],$_POST['categories']);
             $this->recipeRepository->addRecipe($recipe);
@@ -87,9 +82,11 @@ class AddController extends AppController{
 
     public function like(int $id){
 
-        //$this->recipeRepository->checkLike($id,$_SESSION['user']);
-        //TODO funkcja like dodaje like w bazie, przed nią musze na to pozwolic lub nie
-        $this->recipeRepository->like($id);
-        http_response_code(200);
+        if($this->recipeRepository->checkLike($id,$_SESSION['user'])) {
+            $this->recipeRepository->like($id,$_SESSION['user']);
+            $tmp = $this->recipeRepository->getLikesId($id);
+            $this->recipeRepository->updateLikeTable($_SESSION['user'],$tmp);
+            http_response_code(200);
+        }
     }
 }

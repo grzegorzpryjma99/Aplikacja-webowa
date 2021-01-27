@@ -3,15 +3,13 @@
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
     <link rel="stylesheet" type= "text/css" href="public/css/home.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./public/js/przekierowanie.js" defer></script>
-    <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+
+    <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 
-    <title>HOMEE</title>
+    <title>HOME</title>
 </head>
-
 <body>
     <div class="base-container">
         <nav class="site-nav">
@@ -36,8 +34,6 @@
             </u1>
         </nav>
 
-
-
         <main class="main">
             <header>
                 <div class="hamburger1">
@@ -54,11 +50,8 @@
                 </div>
             </header>
 
-
-
             <form class="home" action="recipe" method="POST" ENCTYPE="multipart/form-data">
                 <?php foreach($home as $recipe): ?>
-
                     <div class="project2" id = "<?= $recipe->getId(); ?>">
                         <button class= "baton" name="activeRecipe" value="<?= $recipe->getId(); ?>" >
                             <img class="img" src="public/uploads/<?= $recipe->getImage(); ?>">
@@ -69,10 +62,9 @@
                             </div>
                         </button>
                     </div>
-
                 <?php endforeach; ?>
+
             </form>
-            
         </main>
     </div>
 </body>

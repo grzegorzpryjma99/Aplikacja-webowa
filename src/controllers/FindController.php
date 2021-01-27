@@ -15,8 +15,6 @@ class FindController extends AppController{
             return $this->render('find',['find'=> [$categories]]);
         }
 
-
-
         if($_POST['wybor'] == null){
             var_dump('wszystko bo nic nie wybral ');
         }
@@ -30,9 +28,6 @@ class FindController extends AppController{
        $proteinstart = $_POST['proteinstart'];
        $proteinend = $_POST['proteinend'];
         $category = $_POST['wybor'];
-
-        var_dump($_POST['wybor']);
-
 
         //$user = $userRepository->getUser($email);
         $recipe = $recipeRepository->getTheRecipes($kcalstart,$kcalend,$carbsstart,$carbsend,$fatstart,$fatend,$proteinstart,$proteinend, $category);

@@ -13,7 +13,6 @@
 }
 
 .profiluzytkownika{
-
     display: flex;
     flex-direction: column;
     padding: 5em;
@@ -31,8 +30,8 @@
 .foto{
     display: flex;
     flex-direction: row;
-
 }
+
 .foto>h{
     display: flex;
     flex-direction: column;
@@ -49,17 +48,14 @@
     margin: auto;
 }
 
-
 .profiluzytkownika.div{
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
     height: 400px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 .content{
     width: 100%;
@@ -71,16 +67,17 @@
     text-align: center;
 }
 
-
 .img{
     height: auto;
     width: -webkit-fill-available;
     object-fit: cover;
     border-radius: 0 0 0 0;
 }
+
 .project2{
     height: 45%;
 }
+
 .przep{
     height: 15%;
     color: black;
@@ -141,11 +138,13 @@
         background-color: #E2E4D8;
         grid-gap: 0em;
     }
+
     .butt{
         border: 0px solid #43A3B4;
         font-weight: bold;
         margin-left: 0em;
     }
+
     .profiluzytkownika{
         padding: 3em;
     }
@@ -153,10 +152,10 @@
     .content{
         height: 25%;
     }
+
     .przepisyuzytkownika{
         overflow: hidden;
         padding: 0em;
-
         width: 100%;
     }
 
@@ -165,8 +164,8 @@
     }
 
     .przep{
-        top: -26%;
-        width: 84%;
+        top: -25.5%;
+        width: 83%;
     }
 
     .baton{

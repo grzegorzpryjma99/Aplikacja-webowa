@@ -11,12 +11,10 @@
     font-size: 40px;
 }
 
-
 .photo{
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .description{
     margin-left: auto;
@@ -24,7 +22,6 @@
     height: 20em;
     overflow: auto;
 }
-
 
 .makro>div>h{
     font-size: 30px;
@@ -72,6 +69,7 @@
     font-size: 30px;
     display: contents;
 }
+
 @media only screen and (max-device-width: 420px) {
     .recipe{
         display: flex;
@@ -99,6 +97,5 @@
     .napis{
         padding: 1em;
     }
-
 }
 

@@ -5,24 +5,15 @@
     <link rel="stylesheet" type= "text/css" href="public/css/find.css">
 
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="./public/js/slider2.js" defer></script>
     <script type="text/javascript" src="./public/js/sidemenu.js" defer></script>
 
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-
-
-
-
 
 
     <title>FIND</title>
 </head>
-
 <body>
 <div class="base-container">
     <nav class="site-nav">
@@ -30,7 +21,6 @@
             <button class="cofnij">cofnij</button>
         </div>
         <aside class="side-menu">
-
             <a href="home"><img src="public/img/logov2.svg"></a>
             <u1>
                 <li>
@@ -53,11 +43,6 @@
         </aside>
     </nav>
     <main class="main">
-
-
-
-
-
         <header>
             <div class="hamburger1">
                 <button class="hamburger"></button>
@@ -72,12 +57,9 @@
             <div class="phone">
                 <img src="public/img/logophone.svg">
             </div>
-
         </header>
         <section>
-
             <form class="find" action="find" method="POST">
-
                 <div class="kcal">
                     <div class="kcalicon">
                         <label for="kacl">Kcal</label>
@@ -85,9 +67,9 @@
                     </div>
                     <div class="containerrr">
                         <div class="sliderrr">
-                            <input id="start" name="kcalstart" value=1000 type = "range" min="0" max="5000" oninput="rangevalue.value=value+'kcal'+' - '+end.value+'kcal'"/>
-                            <input id="end" name="kcalend" value=4000 type = "range" min="0" max="5000" oninput="rangevalue.value=start.value+'kcal'+' - '+value+'kcal'"/>
-                            <output id="rangevalue">1000kcal - 4000kcal</output>
+                            <input id="start" name="kcalstart" value=500 type = "range" min="0" max="2500" oninput="rangevalue.value=value+'kcal'+' - '+end.value+'kcal'"/>
+                            <input id="end" name="kcalend" value=2000 type = "range" min="0" max="2500" oninput="rangevalue.value=start.value+'kcal'+' - '+value+'kcal'"/>
+                            <output id="rangevalue">500kcal - 2000kcal</output>
                         </div>
                     </div>
                 </div>
@@ -99,10 +81,10 @@
                     </div>
                     <div class="containerrr">
                         <div class="sliderrr">
-                            <input id="start2" name="carbsstart" value=200 type = "range" min="0" max="1000" oninput="rangevalue2.value=value+'g'+' - '+end2.value+'g'"/>
-                            <input id="end2" name="carbsend" value=800 type = "range" min="0" max="1000" oninput="rangevalue2.value=start2.value+'g'+' - '+value+'g'"/>
+                            <input id="start2" name="carbsstart" value=100 type = "range" min="0" max="500" oninput="rangevalue2.value=value+'g'+' - '+end2.value+'g'"/>
+                            <input id="end2" name="carbsend" value=400 type = "range" min="0" max="500" oninput="rangevalue2.value=start2.value+'g'+' - '+value+'g'"/>
 
-                            <output id="rangevalue2">200g - 800g</output>
+                            <output id="rangevalue2">100g - 400g</output>
                         </div>
                     </div>
                 </div>
@@ -121,7 +103,6 @@
                     </div>
                 </div>
 
-
                 <div class="protein">
                     <div class="kcalicon">
                         <label for="protein">Białko</label>
@@ -136,24 +117,17 @@
                     </div>
                 </div>
 
-
                 <div class="category">
                     <h>Kategoria</h><br>
                     <select class="sel" name="wybor[]">
                         <?php foreach($find[0] as $recipe): ?>
                             <option value="<?= $recipe['categories']?>"><?= $recipe['categories']?> </option>
                         <?php endforeach; ?>
-
                     </select>
                 </div>
-
-
                 <button type="submit">Szukaj</button>
             </form>
         </section>
     </main>
 </div>
-
-
-
 </body>
