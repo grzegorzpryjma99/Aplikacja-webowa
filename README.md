@@ -1,4 +1,4 @@
-# B-fit aplikacja webowa do dzielenia się przepisami
+# B-fit
 Web application that allows users to share recipes. Users can share their recipes and search according to preferences
 # Technologies
 
